@@ -228,6 +228,12 @@ header {
   position: relative;
 }
 
+@media only screen and (min-width: 992px) {
+  .banner .banner-wrapper.rules {
+    min-height: 400px;
+  }
+}
+
 .banner .banner-wrapper.page {
   max-width: 1180px;
   margin: 0 auto;
@@ -518,6 +524,12 @@ header {
   bottom: 30px;
 }
 
+@media only screen and (min-width: 992px) {
+  .cards-container .card-image {
+    height: 255px;
+  }
+}
+
 .cards-container .card-body {
   padding: 30px;
   -webkit-box-orient: vertical;
@@ -581,6 +593,7 @@ header {
 
 .info-wrapper .row .image img {
   width: 100%;
+  border-radius: 5px;
 }
 
 @media only screen and (min-width: 992px) {

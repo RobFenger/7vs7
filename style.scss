@@ -227,6 +227,12 @@ header {
         min-height: 400px;
         position: relative;
 
+        &.rules {
+            @media #{$bp-md} {
+                min-height: 400px;
+            }
+        }
+
         &.page {
             max-width: $maxWidth;
             margin: 0 auto;
@@ -462,6 +468,10 @@ header {
             right: $padding;
             bottom: $padding;
         }
+
+        @media #{$bp-md} {
+            height: 255px;
+        }
     }
 
     .card-body {
@@ -510,6 +520,7 @@ header {
         .image {
             img {
                 width: 100%;
+                border-radius: $borderRadius;
             }
 
             @media #{$bp-md} {
