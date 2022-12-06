@@ -66,16 +66,30 @@
               <div class="form-input">
                 <div class="radio-button">
                   <input type="radio" id="team" name="team-or-individu" value="team" onchange="showTeam()">
-                  <label for="team">Team</label>
+                  <label for="team">Vriendenteam</label>
                 </div>
                 <div class="radio-button">
                   <input type="radio" id="individu" name="team-or-individu" value="individu" onchange="hideTeam()">
                   <label for="individu">Individueel</label>
                 </div>
+                <div class="radio-button">
+                  <input type="radio" id="company" name="team-or-individu" value="individu" onchange="showTeam()">
+                  <label for="individu">Bedrijfsteam</label>
+                </div>
               </div>
               <div class="form-input team-name-input">
                 <div class="label">Teamnaam (Optioneel)</div>
                 <input class="input team-name" placeholder="Teamnaam">
+              </div>
+              <div class="form-input">
+                <div class="radio-button">
+                  <input type="radio" id="team" name="high-or-low" value="team" onchange="showTeam()">
+                  <label for="team">Hoge Klasse</label>
+                </div>
+                <div class="radio-button">
+                  <input type="radio" id="individu" name="high-or-low" value="individu" onchange="hideTeam()">
+                  <label for="individu">Lage Klasse</label>
+                </div>
               </div>
               <div class="submit-button" onclick="displayForm()">
                 Meld je nu aan!

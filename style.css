@@ -176,6 +176,42 @@ header {
   }
 }
 
+.header-container .dropdown-link {
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  font-weight: 700;
+}
+
+.header-container .dropdown-link:hover .dropdown-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header-container .dropdown-container {
+  min-width: 200px;
+  padding-bottom: 30px;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  position: absolute;
+  top: 70px;
+  left: -30px;
+  background: #ffffff;
+}
+
+.header-container .dropdown-container .menu-item {
+  margin: 15px 30px;
+}
+
 @media only screen and (min-width: 992px) {
   .header-container {
     padding: 0;
@@ -190,6 +226,16 @@ header {
   width: 100%;
   min-height: 400px;
   position: relative;
+}
+
+.banner .banner-wrapper.page {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.banner .banner-wrapper.page .image {
+  width: 100%;
+  left: 0;
 }
 
 @media only screen and (min-width: 992px) {
@@ -241,8 +287,17 @@ header {
 }
 
 .banner .headings h2 {
+  padding-bottom: 15px;
   font-weight: 700;
   color: #ffffff;
+}
+
+.banner .headings h2.number {
+  color: #000000;
+}
+
+.banner .headings h2.versus {
+  color: #0d8537;
 }
 
 .banner .image {
@@ -272,6 +327,38 @@ header {
 
 .row-wrapper.cards {
   max-width: none;
+}
+
+.usps {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.usps .usp {
+  min-width: calc((100% - 30px) / 3);
+  margin-right: 15px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50px;
+  -webkit-box-shadow: 0 4px 15px rgba(43, 126, 179, 0.2);
+          box-shadow: 0 4px 15px rgba(43, 126, 179, 0.2);
+  background: rgba(13, 133, 55, 0.7);
+}
+
+.usps .usp-icon {
+  margin-right: 10px;
 }
 
 .cards-wrapper {
@@ -461,6 +548,72 @@ header {
   }
 }
 
+.info-wrapper {
+  max-width: 1180px;
+  margin: 0 auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  background: #ffffff;
+}
+
+.info-wrapper .row {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+}
+
+.info-wrapper .row .image img {
+  width: 100%;
+}
+
+@media only screen and (min-width: 992px) {
+  .info-wrapper .row .image {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .info-wrapper .row .info {
+    width: 50%;
+  }
+}
+
+.info-wrapper .row .info:first-child .unordered-list {
+  padding-right: 30px;
+}
+
+.info-wrapper .row .unordered-list {
+  list-style-type: none;
+}
+
+.info-wrapper .row .unordered-list .list-item {
+  padding-bottom: 10px;
+}
+
+.info-wrapper .row .unordered-list .list-item .usp-icon {
+  margin-right: 10px;
+}
+
+@media only screen and (min-width: 992px) {
+  .info-wrapper .row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .info-wrapper {
+    padding-top: 30px;
+    margin-top: -120px;
+    border-radius: 50px;
+  }
+}
+
 .banner-with-form {
   margin-bottom: 55px;
   position: relative;
@@ -579,6 +732,21 @@ header {
 footer {
   width: 100%;
   min-height: 70px;
+  padding: 30px 0;
   background: #d4d6df;
+}
+
+footer .footer-container {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .footer-container .menu-item {
+  margin: 30px 15px;
 }
 /*# sourceMappingURL=style.css.map */

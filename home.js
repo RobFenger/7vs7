@@ -94,3 +94,12 @@ function dotClick (e) {
 }
 
 sliderDots.addEventListener("click", dotClick);
+
+//------------- Menu --------------
+
+// const dropdownLink = document.querySelector(".dropdown-link");
+// const dropdownContainer = document.querySelector(".dropdown-container");
+
+// function toggleMenu () {
+
+// }
