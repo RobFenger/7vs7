@@ -4,7 +4,7 @@
   <head>
     <title>7vs7</title>
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-    <link rel="icon" type="image/png" href="7V7HAARLEM.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="7V7-logo.png" sizes="16x16">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&family=Zen+Dots&display=swap" rel="stylesheet">
@@ -21,13 +21,14 @@
           <div class="menu-line"></div>
         </div>
         <div class="logo">
-          <a href="https://7vs7.nl">
-            <img alt="7vs7" src="7V7HAARLEM.png">
+          <a href="index.html">
+            <img alt="7vs7" src="7V7-logo.png">
           </a>
         </div>
         <div class="nav-menu">
-          <div class="menu-item">Locatie</div>
-          <div class="menu-item">Contact</div>
+          <div class="menu-item link">Locatie</div>
+          <div class="menu-item link">Contact</div>
+          <a class="menu-item link menu-button" href="form.html">Meld je nu aan!</a>
         </div>
       </div>
     </header>
@@ -50,44 +51,70 @@
       <div class="spacer-sm"></div>
       <div class="cards-wrapper">
         <div class="cards-container">
-          <div class="card card-one rules">
+          <div class="card card-one efficacy">
             <div class="card-image">
               <img src="7vs7-player.jpg">
+              <img class="logo-in-card" src="7V7-logo.png">
             </div>
             <div class="card-body">
-              <h2 class="card-title">Regels</h2>
-              <p class="card-text"></p>
-              <a class="link"></a>
+              <h2 class="card-title">Wat is 7vs7?</h2>
+              <p class="card-text">
+                7vs7 is de voetbalcompetitie in Haarlem waarbij er niet 11 tegen 11 wordt gespeeld,
+                maar 7 tegen 7 op een half veld. Het is niet zo dwingend als een echte voetbalclub, maar ongedwongen waarbij het vooral draait om plezier in het voetballen!
+              </p>
+              <a class="link" href="wat-is-7vs7.html">Lees meer</a>
             </div>
           </div>
-          <div class="card two efficacy">
-            <div class="card-image">
-              <img src="7vs7-player.jpg">
-            </div>
-            <div class="card-body">
-              <h2 class="card-title">Hoe werkt het?</h2>
-              <p class="card-text"></p>
-              <a class="link"></a>
-            </div>
-          </div>
-          <div class="card three audience">
+          <div class="card audience">
             <div class="card-image">
               <img src="7vs7-player.jpg">
             </div>
             <div class="card-body">
               <h2 class="card-title">Voor wie is het?</h2>
-              <p class="card-text"></p>
-              <a class="link"></a>
+              <p class="card-text">
+                7vs7 is in feite voor iedereen boven de 18 jaar. Het is bedoeld voor mensen die geen tijd hebben om serieus bij een club te voetballen,
+                maar toch zo nu en dan een wedstrijd willen spelen. Bovendien is het leuk voor bedrijven die op zoek zijn naar activiteiten voor hun personeel.
+              </p>
+              <a class="link" href="voor-wie.html">Lees meer</a>
             </div>
           </div>
-          <div class="card four subscribe">
+          <div class="card rules">
             <div class="card-image">
               <img src="7vs7-player.jpg">
             </div>
             <div class="card-body">
+              <h2 class="card-title">Regels</h2>
+              <p class="card-text">
+                De regels zijn simpel. Ze lijken op de regels van het 'echte' voetbal, maar dan passend voor 7 tegen 7 en er op gericht om het voor iedereen leuk te houden.
+                De belangrijkste regel is dan ook: Heb plezier!
+              </p>
+              <a class="link" href="regels.html">Bekijk hier alle regels</a>
+            </div>
+          </div>
+          <div class="card costs">
+            <div class="card-image">
+              <img src="7vs7-player.jpg">
+            </div>
+            <div class="card-body">
+              <h2 class="card-title">Wat kost het?</h2>
+              <p class="card-text">
+                De kosten zijn afhankelijk van het aanmelden als team of als individu.
+              </p>
+              <a class="link" href="kosten.html">Check hier de prijs</a>
+            </div>
+          </div>
+          <div class="card subscribe">
+            <div class="card-image">
+              <img src="7vs7-player.jpg">
+              <img class="logo-in-card" src="7V7-logo.png">
+            </div>
+            <div class="card-body">
               <h2 class="card-title">Schrijf je nu in!</h2>
-              <p class="card-text"></p>
-              <a class="link"></a>
+              <p class="card-text">
+                Inschrijven kan als team of als individu. Heb je geen team?
+                Geen probleem. Wij zorgen ervoor dat je in een team terechtkomt!
+              </p>
+              <a class="link" href="form.html">Schrijf je hier in!</a>
             </div>
           </div>
         </div>
@@ -96,26 +123,23 @@
           <div class="slider-dots">
             <div class="dot dot-one active"></div>
             <div class="dot dot-two"></div>
+            <div class="dot dot-three"></div>
           </div>
           <div class="slider-arrows">
-            <div class="slider-arrow slider-arrow-left inactive">
-              <img class="icon-arrow" src="slider-arrow-white.svg" onclick="moveRight()"></img>
+            <div class="slider-arrow slider-arrow-left inactive" onclick="moveLeft()">
+              <img class="icon-arrow" src="slider-arrow-white.svg"></img>
             </div>
-            <div class="slider-arrow slider-arrow-right">
-              <img class="icon-arrow" src="slider-arrow-white.svg" onclick="moveLeft()"></img>
+            <div class="slider-arrow slider-arrow-right" onclick="moveRight()">
+              <img class="icon-arrow" src="slider-arrow-white.svg"></img>
             </div>
           </div>
         </div>
-
       </div>
 
 
     </div>
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.min.js"
-      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-      crossorigin="anonymous">
-    </script>
+    <div class="spacer-sm"></div>
+    <footer></footer>
     <script src="home.js"></script>
   </body>
 </html>

@@ -20,7 +20,26 @@ h2 {
   border: 0;
 }
 
+body {
+  font-size: 16px;
+  line-height: 25px;
+}
+
+h2 {
+  font-family: "Ubuntu";
+  font-size: 40px;
+  line-height: 40px;
+}
+
+@media only screen and (min-width: 992px) {
+  h2 {
+    font-size: 50px;
+    line-height: 50px;
+  }
+}
+
 .page-wrapper {
+  padding-top: 70px;
   margin: 0 auto;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -29,9 +48,44 @@ h2 {
   overflow: hidden;
 }
 
+.link {
+  position: relative;
+  font-weight: 700;
+  text-decoration: none;
+  color: #000000;
+  cursor: pointer;
+}
+
+.link:after {
+  content: '';
+  width: 0;
+  height: 2px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #1d1f48;
+  -webkit-transition: width 0.3s ease-out;
+  transition: width 0.3s ease-out;
+}
+
+.link:hover:after {
+  width: 100%;
+}
+
 .spacer-sm {
   width: 100%;
   height: 40px;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  -webkit-box-shadow: 0 4px 15px rgba(43, 126, 179, 0.2);
+          box-shadow: 0 4px 15px rgba(43, 126, 179, 0.2);
+  background: #ffffff;
+  z-index: 10;
 }
 
 .header-container {
@@ -84,9 +138,23 @@ h2 {
   cursor: pointer;
 }
 
+.header-container .nav-menu .menu-item.menu-button {
+  height: 100%;
+  padding: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #ffffff;
+  background: #1d1f48;
+}
+
+.header-container .nav-menu .menu-item:last-child {
+  margin-right: 0;
+}
+
 @media only screen and (min-width: 992px) {
   .header-container .nav-menu .menu-item {
-    padding: 0 30px;
+    margin: 0 30px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -95,12 +163,22 @@ h2 {
 
 @media only screen and (min-width: 992px) {
   .header-container .nav-menu {
+    height: 100%;
     -webkit-box-flex: 1;
         -ms-flex: 1 0 auto;
             flex: 1 0 auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .header-container {
+    padding: 0;
   }
 }
 
@@ -110,13 +188,13 @@ h2 {
 
 .banner .banner-wrapper {
   width: 100%;
-  height: 400px;
+  min-height: 400px;
   position: relative;
 }
 
 @media only screen and (min-width: 992px) {
   .banner .banner-wrapper {
-    height: 600px;
+    min-height: 600px;
   }
 }
 
@@ -144,6 +222,7 @@ h2 {
 .banner .headings h1 {
   font-family: "Zen Dots";
   font-size: 48px;
+  line-height: 48px;
 }
 
 .banner .headings h1.number {
@@ -157,12 +236,11 @@ h2 {
 @media only screen and (min-width: 992px) {
   .banner .headings h1 {
     font-size: 83px;
+    line-height: 83px;
   }
 }
 
 .banner .headings h2 {
-  font-family: "Ubuntu";
-  font-size: 50px;
   font-weight: 700;
   color: #ffffff;
 }
@@ -296,9 +374,24 @@ h2 {
   margin-bottom: 30px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
   position: relative;
+}
+
+.cards-container .card:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #d4d6df;
+  z-index: -1;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
 .cards-container .card:hover {
@@ -310,17 +403,9 @@ h2 {
   transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
-.cards-container .card:hover :before {
-  content: '';
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: #d4d6df;
+.cards-container .card:hover:before {
   -webkit-transform: translate(6px, 6px);
           transform: translate(6px, 6px);
-  z-index: -1;
 }
 
 @media only screen and (min-width: 992px) {
@@ -331,14 +416,169 @@ h2 {
 
 .cards-container .card-image {
   width: 100%;
+  position: relative;
 }
 
 .cards-container .card-image img {
   width: 100%;
 }
 
+.cards-container .card-image .logo-in-card {
+  width: auto;
+  height: 35px;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+}
+
 .cards-container .card-body {
   padding: 30px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   background: #eef1f6;
+}
+
+.cards-container .card-body .card-title {
+  font-size: 30px;
+  line-height: 30px;
+}
+
+.cards-container .card-body .link {
+  margin-top: auto;
+  font-size: 18px;
+}
+
+@media only screen and (min-width: 992px) {
+  .cards-container .card-body {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+  }
+}
+
+.banner-with-form {
+  margin-bottom: 55px;
+  position: relative;
+}
+
+.banner-with-form .banner-wrapper {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.banner-with-form .banner-wrapper .headings {
+  position: absolute;
+  top: 0;
+}
+
+@media only screen and (min-width: 992px) {
+  .banner-with-form .banner-wrapper {
+    min-height: 400px;
+  }
+}
+
+.form-container {
+  width: auto;
+  margin: 0 auto;
+}
+
+.form-container {
+  min-width: 500px;
+  max-height: 110px;
+  padding: 30px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  border-radius: 5px;
+  background: #eef1f6;
+  overflow: hidden;
+  -webkit-transform: translateY(55px);
+          transform: translateY(55px);
+  z-index: 1;
+}
+
+.form-container .submit-form {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+}
+
+.form-container .form-input {
+  padding-bottom: 15px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+.form-container .form-input .input {
+  width: 100%;
+  min-height: 50px;
+  padding: 15px;
+  border: 2px solid #d4d6df;
+  border-radius: 0;
+  font-size: 16px;
+}
+
+.form-container .form-input .input:hover, .form-container .form-input .input:active, .form-container .form-input .input:focus, .form-container .form-input .input:focus-visible {
+  border: 2px solid #1d1f48;
+  border-radius: 0;
+  outline: 0;
+}
+
+.form-container .form-input .radio-button {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form-container .form-input .radio-button input {
+  margin-right: 15px;
+}
+
+.form-container .radio-label {
+  padding-bottom: 10px;
+}
+
+.form-container .team-name-input {
+  display: none;
+}
+
+.form-container .submit-button {
+  width: 100%;
+  min-height: 50px;
+  padding: 15px;
+  margin-top: 15px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #ffffff;
+  background: #1d1f48;
+  cursor: pointer;
+}
+
+footer {
+  width: 100%;
+  min-height: 70px;
+  background: #d4d6df;
 }
 /*# sourceMappingURL=style.css.map */
