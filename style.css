@@ -558,6 +558,20 @@ header {
   background: #ffffff;
 }
 
+.info-wrapper .versus-info {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+.info-wrapper .title-wrapper {
+  padding-bottom: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .info-wrapper .row {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -585,7 +599,13 @@ header {
   padding-right: 30px;
 }
 
+.info-wrapper .row .list-title {
+  padding-bottom: 30px;
+  padding-left: 30px;
+}
+
 .info-wrapper .row .unordered-list {
+  padding-left: 30px;
   list-style-type: none;
 }
 
