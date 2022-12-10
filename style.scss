@@ -170,10 +170,35 @@ header {
     .logo {
         height: 100%;
         align-items: center;
+        position: relative;
+        overflow: hidden;
         z-index: 1;
+
+        &:before {
+            content: '';
+            width: 83px;
+            height: 46px;
+            position: absolute;
+            bottom: 50%;
+            left: 0;
+            background-image: url('7V7-logo.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            transform: translateY(200%);
+            transition: 0.25s ease-in-out;
+        }
+
+        .header-sm &:before {
+            transform: translateY(50%);
+        }
+
+        .header-sm & img {
+            transform: translateY(-200%);
+        }
 
         img {
             max-height: $headerSize - $padding;
+            transition: 0.25s ease-in-out;
         }
     }
 
@@ -325,6 +350,10 @@ header {
         align-items: center;
         justify-content: center;
 
+        .seven-wrapper {
+            animation: moveInRight 1s ease-out;
+        }
+
         h1,
         h2 {
             margin: 0;
@@ -353,7 +382,9 @@ header {
         h2 {
             padding-bottom: $padding / 2;
             font-weight: 700;
+            letter-spacing: 6px;
             color: $white;
+            animation: moveInLeft 1s ease-out;
 
             &.number {
                 color: $black;
@@ -361,6 +392,38 @@ header {
 
             &.versus {
                 color: $green;
+            }
+        }
+
+        @keyframes moveInLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-100px);
+            }
+
+            80% {
+                transform: translateX(10px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translate(0);
+            }
+        }
+
+        @keyframes moveInRight {
+            0% {
+                opacity: 0;
+                transform: translateX(100px);
+            }
+
+            80% {
+                transform: translateX(-10px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translate(0);
             }
         }
     }

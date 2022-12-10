@@ -17,3 +17,16 @@ function toggleMenu () {
     menuIcon.classList.remove("clicked");
   }
 }
+
+const header = document.querySelector("header");
+
+const onScroll = function onScroll(event) {
+  if (window.pageYOffset > header.clientHeight) {
+    header.classList.add("header-sm");
+  } else {
+    header.classList.remove("header-sm");
+  }
+};
+
+// We would prefer to define onScroll inline, but JavaScript does not allow inline ifs
+window.addEventListener("scroll", onScroll);
