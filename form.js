@@ -26,9 +26,6 @@ function displayForm() {
   };
   formContainer.classList.add("show-form");
   formContainer.classList.remove("hide-form");
-  if (window.innerWidth <= 992) {
-    body.classList.add("no-scroll");
-  };
   animateFormUp = setInterval(animateUp, 10);
 };
 

@@ -140,12 +140,26 @@ header {
         margin-right: $padding / 2;
         flex-flow: column nowrap;
         cursor: pointer;
+        z-index: 1;
 
         .menu-line {
             width: 100%;
             height: 4px;
-            margin: 4px 0;
+            margin: 3px 0;
             background: $black;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        &.clicked .one {
+            transform: translateY(4px) rotate(135deg);
+        }
+
+        &.clicked .two {
+            transform: translate(100vw);
+        }
+
+        &.clicked .three {
+            transform: translateY(-16px) rotate(-135deg);
         }
 
         @media #{$bp-md} {
@@ -156,6 +170,7 @@ header {
     .logo {
         height: 100%;
         align-items: center;
+        z-index: 1;
 
         img {
             max-height: $headerSize - $padding;
@@ -168,6 +183,7 @@ header {
         padding-top: $headerSize;
         display: none;
         flex-flow: column nowrap;
+        align-items: flex-start;
         position: fixed;
         top: 0;
         left: 0;
@@ -175,6 +191,7 @@ header {
         overflow: auto;
 
         .close-menu {
+            width: 100%;
             padding-right: $padding;
             justify-content: flex-end;
             font-size: 25px;
@@ -191,15 +208,16 @@ header {
             cursor: pointer;
 
             &.menu-button {
+                width: 100%;
                 padding: $padding;
-                margin-top: auto;
                 align-items: center;
+                text-align: center;
                 color: $white;
                 background: $darkBlue;
 
                 @media #{$bp-md} {
+                    width: auto;
                     height: 100%;
-                    margin-top: 0;
                 }
             }
 
@@ -301,6 +319,7 @@ header {
     .headings {
         width: 100%;
         height: 100%;
+        padding: $padding / 2;
         flex-flow: column nowrap;
         align-items: center;
         justify-content: center;
@@ -595,10 +614,6 @@ header {
         .info {
             flex-flow: column;
 
-            h3 {
-                padding: 0 $padding;
-            }
-
             @media #{$bp-md} {
                 width: 50%;
             }
@@ -611,13 +626,19 @@ header {
         }
 
         .list-title,
-        .intro {
-            padding-bottom: $padding;
-            padding-left: $padding;
+        .intro,
+        h3 {
+            padding: $padding / 2;
+            margin: 0;
+
+            @media #{$bp-md} {
+                padding: $padding;
+            }
         }
 
         .unordered-list {
-            padding-left: $padding;
+            padding: $padding / 2;
+            margin: 0;
             list-style-type: none;
 
             .list-item {
@@ -626,6 +647,10 @@ header {
                 .usp-icon {
                     margin-right: $padding / 3;
                 }
+            }
+
+            @media #{$bp-md} {
+                padding: $padding;
             }
         }
 
@@ -670,7 +695,6 @@ header {
 }
 
 .form-container {
-    min-width: 500px;
     max-height: $buttonMinHeight + $padding * 2;
     padding: $padding;
     flex-flow: column nowrap;
@@ -735,6 +759,10 @@ header {
         background: $darkBlue;
         cursor: pointer;
     }
+
+    @media #{$bp-md} {
+        min-width: 500px;
+    }
 }
 
 
@@ -753,6 +781,7 @@ footer {
 
         img {
             max-width: 100%;
+            padding: $padding / 2;
             margin-bottom: $padding / 2;
 
             @media #{$bp-md} {
@@ -763,6 +792,7 @@ footer {
         .footer-menu-items {
             max-width: 100%;
             flex-flow: column;
+            align-items: center;
 
             @media #{$bp-md} {
                 flex-flow: row;
