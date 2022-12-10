@@ -169,7 +169,6 @@ header {
   width: 100vw;
   height: 100vh;
   padding-top: 70px;
-  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
@@ -182,6 +181,10 @@ header {
   left: 0;
   background: #ffffff;
   overflow: auto;
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: -webkit-transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .header-container .nav-menu .close-menu {
@@ -632,7 +635,6 @@ header {
 
 .cards-container .card-image {
   width: 100%;
-  position: relative;
 }
 
 .cards-container .card-image img {
@@ -707,6 +709,15 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
+}
+
+@media only screen and (min-width: 992px) {
+  .info-wrapper .row.second {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-flow: row-reverse nowrap;
+            flex-flow: row-reverse nowrap;
+  }
 }
 
 .info-wrapper .row .image img {

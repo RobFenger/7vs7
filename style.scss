@@ -178,10 +178,10 @@ header {
     }
 
     .nav-menu {
+        // display: none;
         width: 100vw;
         height: 100vh;
         padding-top: $headerSize;
-        display: none;
         flex-flow: column nowrap;
         align-items: flex-start;
         position: fixed;
@@ -189,6 +189,7 @@ header {
         left: 0;
         background: $white;
         overflow: auto;
+        transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 
         .close-menu {
             width: 100%;
@@ -541,7 +542,6 @@ header {
 
     .card-image {
         width: 100%;
-        position: relative;
 
         img {
             width: 100%;
@@ -599,6 +599,12 @@ header {
 
     .row {
         flex-flow: column nowrap;
+
+        &.second {
+            @media #{$bp-md} {
+                flex-flow: row-reverse nowrap;
+            }
+        }
 
         .image {
             img {
