@@ -17,10 +17,12 @@ let cardWidth = card.offsetWidth;
 
 
 function moveLeft () {
-  transformPx = transformPx + cardWidth + 15;
-  let newTransform = transformPx + 'px';
-  cardsContainer.style.transform = `translateX(${newTransform})`;
-  index -= 1;
+  if (index != 0) {
+    transformPx = transformPx + cardWidth + 15;
+    let newTransform = transformPx + 'px';
+    cardsContainer.style.transform = `translateX(${newTransform})`;
+    index -= 1;
+  }
 
   console.log(dots[index]);
 
@@ -51,10 +53,14 @@ function moveLeft () {
 }
 
 function moveRight () {
-  transformPx = transformPx - cardWidth - 15;
-  let newTransform = transformPx + 'px';
-  cardsContainer.style.transform = `translateX(${newTransform})`;
-  index += 1;
+  if (index != numberOfCards - 1) {
+    transformPx = transformPx - cardWidth - 15;
+    let newTransform = transformPx + 'px';
+    cardsContainer.style.transform = `translateX(${newTransform})`;
+    index += 1;
+  }
+
+
 
   if (window.innerWidth > 992) {
     dots[index].classList.add("active");

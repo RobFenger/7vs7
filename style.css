@@ -417,6 +417,10 @@ header {
   width: 100%;
   max-width: 1180px;
   margin: 0 auto;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -424,7 +428,9 @@ header {
 
 .usps .usp {
   min-width: calc((100% - 30px) / 3);
+  padding: 15px;
   margin-right: 15px;
+  margin-bottom: 15px;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
@@ -439,6 +445,14 @@ header {
   -webkit-box-shadow: 0 4px 15px rgba(43, 126, 179, 0.2);
           box-shadow: 0 4px 15px rgba(43, 126, 179, 0.2);
   background: rgba(13, 133, 55, 0.7);
+}
+
+.usps .usp h3 {
+  margin: 0;
+}
+
+.usps .usp:last-child {
+  margin-right: 0;
 }
 
 .usps .usp-icon {
@@ -861,6 +875,7 @@ footer {
 }
 
 footer .footer-container {
+  width: 100%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
@@ -870,7 +885,41 @@ footer .footer-container {
           align-items: center;
 }
 
+footer .footer-container img {
+  max-width: 100%;
+  margin-bottom: 15px;
+}
+
+@media only screen and (min-width: 992px) {
+  footer .footer-container img {
+    margin-bottom: 0;
+  }
+}
+
+footer .footer-container .footer-menu-items {
+  max-width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+@media only screen and (min-width: 992px) {
+  footer .footer-container .footer-menu-items {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+  }
+}
+
 footer .footer-container .menu-item {
-  margin: 30px 15px;
+  margin: 15px;
+}
+
+@media only screen and (min-width: 992px) {
+  footer .footer-container .menu-item {
+    margin: 30px 15px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
