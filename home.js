@@ -1,6 +1,7 @@
 const arrowLeft = document.querySelector(".slider-arrow-left");
 const arrowRight = document.querySelector(".slider-arrow-right");
 const cardsContainer = document.querySelector(".cards-container");
+const numberOfCards = cardsContainer.childElementCount;
 const sliderDots = document.querySelector(".slider-dots");
 const dotOne = document.querySelector(".dot-one");
 const dotTwo = document.querySelector(".dot-two");
@@ -20,19 +21,29 @@ function moveLeft () {
 
   console.log(dots[index]);
 
-  dots[index].classList.add("active");
-  for (let i = 0; i < dots.length; i++) {
-    if (i !== index) {
-      dots[i].classList.remove("active");
+  if (window.innerWidth > 992) {
+    dots[index].classList.add("active");
+    for (let i = 0; i < dots.length; i++) {
+      if (i !== index) {
+        dots[i].classList.remove("active");
+      }
     }
-  }
 
-  if (index == 0) {
-    arrowLeft.classList.add("inactive");
-  }
+    if (index == 0) {
+      arrowLeft.classList.add("inactive");
+    }
 
-  if (index < dots.length -1) {
-    arrowRight.classList.remove("inactive");
+    if (index < dots.length -1) {
+      arrowRight.classList.remove("inactive");
+    }
+  } else {
+    if (index == 0) {
+      arrowLeft.classList.add("inactive");
+    }
+
+    if (index < numberOfCards - 1) {
+      arrowRight.classList.remove("inactive");
+    }
   }
 }
 
@@ -42,19 +53,29 @@ function moveRight () {
   cardsContainer.style.transform = `translateX(${newTransform})`;
   index += 1;
 
-  dots[index].classList.add("active");
-  for (let i = 0; i < dots.length; i++) {
-    if (i !== index) {
-      dots[i].classList.remove("active");
+  if (window.innerWidth > 992) {
+    dots[index].classList.add("active");
+    for (let i = 0; i < dots.length; i++) {
+      if (i !== index) {
+        dots[i].classList.remove("active");
+      }
     }
-  }
 
-  if (index == dots.length - 1) {
-    arrowRight.classList.add("inactive");
-  }
+    if (index == dots.length - 1) {
+      arrowRight.classList.add("inactive");
+    }
 
-  if (index > 0) {
-    arrowLeft.classList.remove("inactive");
+    if (index > 0) {
+      arrowLeft.classList.remove("inactive");
+    }
+  } else {
+    if (index >= numberOfCards - 1) {
+      arrowRight.classList.add("inactive");
+    }
+
+    if (index > 0) {
+      arrowLeft.classList.remove("inactive");
+    }
   }
 }
 
@@ -97,9 +118,14 @@ sliderDots.addEventListener("click", dotClick);
 
 //------------- Menu --------------
 
-// const dropdownLink = document.querySelector(".dropdown-link");
-// const dropdownContainer = document.querySelector(".dropdown-container");
+const body = document.querySelector("body");
+const navMenu = document.querySelector(".nav-menu");
 
-// function toggleMenu () {
+function showMenu () {
+  navMenu.style.display = "flex";
+  body.classList.add("no-scroll");
+}
 
-// }
+function closeMenu () {
+  navMenu.style.display = "none";
+}

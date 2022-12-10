@@ -49,6 +49,10 @@ h2 {
 body {
     font-size: $fontSize;
     line-height: 25px;
+
+    &.no-scroll {
+        overflow: hidden;
+    }
 }
 
 h2 {
@@ -63,10 +67,15 @@ h2 {
 }
 
 .page-wrapper {
+    width: calc(100% - #{$padding});
     padding-top: $headerSize;
     margin: 0 auto;
     flex-flow: column nowrap;
     overflow: hidden;
+
+    @media #{$bp-md} {
+        width: 100%;
+    }
 }
 
 
@@ -80,14 +89,16 @@ h2 {
     cursor: pointer;
 
     &:after {
-        content: '';
-        width: 0;
-        height: 2px;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        background: $darkBlue;
-        transition: width 0.3s ease-out;
+        @media #{$bp-md} {
+            content: '';
+            width: 0;
+            height: 2px;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: $darkBlue;
+            transition: width 0.3s ease-out;
+        }
     }
 
     &:hover:after {
@@ -152,16 +163,45 @@ header {
     }
 
     .nav-menu {
+        width: 100vw;
+        height: 100vh;
+        padding-top: $headerSize;
+        display: none;
+        flex-flow: column nowrap;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: $white;
+        overflow: auto;
+
+        .close-menu {
+            padding-right: $padding;
+            justify-content: flex-end;
+            font-size: 25px;
+            font-weight: 700;
+            cursor: pointer;
+
+            @media #{$bp-md} {
+                display: none;
+            }
+        }
+
         .menu-item {
-            display: none;
+            // display: none;
+            padding: $padding / 2;
             cursor: pointer;
 
             &.menu-button {
-                height: 100%;
                 padding: $padding;
+                margin-top: auto;
                 align-items: center;
                 color: $white;
                 background: $darkBlue;
+
+                @media #{$bp-md} {
+                    height: 100%;
+                    margin-top: 0;
+                }
             }
 
             &:last-child {
@@ -169,22 +209,28 @@ header {
             }
 
             @media #{$bp-md} {
+                padding: 0;
                 margin: 0 $padding;
                 display: flex;
             }
         }
 
         @media #{$bp-md} {
+            width: auto;
             height: 100%;
+            padding-top: 0;
+            display: flex;
             flex: 1 0 auto;
+            flex-flow: row nowrap;
             align-items: center;
             justify-content: flex-end;
+            position: static;
+            overflow: visible;
         }
     }
 
     .dropdown-link {
-        height: 100%;
-        align-items: center;
+        flex-flow: column nowrap;
         position: relative;
         font-weight: 700;
 
@@ -193,21 +239,36 @@ header {
                 display: flex;
             }
         }
+
+        @media #{$bp-md} {
+            height: 100%;
+            flex-flow: row nowrap;
+            align-items: center;
+        }
     }
 
     .dropdown-container {
         min-width: 200px;
         padding-bottom: $padding;
-        display: none;
         flex-flow: column nowrap;
         align-items: flex-start;
-        position: absolute;
-        top: $headerSize;
-        left: $padding * -1;
         background: $white;
 
         .menu-item {
-            margin: $padding / 2 $padding;
+            &:first-child {
+                padding-top: $padding;
+            }
+
+            @media #{$bp-md} {
+                margin: $padding / 2 $padding;
+            }
+        }
+
+        @media #{$bp-md} {
+            display: none;
+            position: absolute;
+            top: $headerSize;
+            left: $padding * -1;
         }
     }
 
@@ -350,6 +411,7 @@ header {
 // ------------------ Cards -----------------
 
 .cards-wrapper {
+    width: 100%;
     max-width: $maxWidth;
     margin: 0 auto;
     flex-flow: column;
@@ -361,6 +423,7 @@ header {
         .slider-dots {
             width: 100%;
             height: 100%;
+            display: none;
             align-items: center;
             justify-content: center;
             position: absolute;
@@ -421,35 +484,39 @@ header {
     transition: transform 0.3s;
 
     .card {
-        min-width: calc((100% - #{$padding}) / 3);
+        min-width: 100%;
         margin-right: $padding / 2;
         margin-bottom: $padding;
         flex-flow: column nowrap;
         position: relative;
 
         &:before {
-            content: '';
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            background: $lightBlue;
-            z-index: -1;
-            transition: transform 0.3s;
+            @media #{$bp-md} {
+                content: '';
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: $lightBlue;
+                z-index: -1;
+                transition: transform 0.3s;
+            }
         }
 
         &:hover {
-            transform: scale(1.03);
-            transition: transform 0.3s;
-
             &:before {
                 transform: translate(6px, 6px);
+            }
+
+            @media #{$bp-md} {
+                transform: scale(1.03);
+                transition: transform 0.3s;
             }
         }
 
         @media #{$bp-md} {
-            width: calc((100% - #{$padding * 2}) / 3);
+            min-width: calc((100% - #{$padding}) / 3);
         }
     }
 
@@ -476,6 +543,7 @@ header {
 
     .card-body {
         padding: $padding;
+        flex: 1 0 auto;
         flex-flow: column nowrap;
         align-items: flex-start;
         background: $cardColor;
@@ -488,10 +556,6 @@ header {
         .link {
             margin-top: auto;
             font-size: 18px;
-        }
-
-        @media #{$bp-md} {
-            flex: 1 0 auto;
         }
     }
 }
