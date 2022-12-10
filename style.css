@@ -642,11 +642,12 @@ header {
 }
 
 .cards-wrapper .slider-control .slider-arrows {
+  width: 100%;
   pointer-events: none;
 }
 
 .cards-wrapper .slider-control .slider-arrows .slider-arrow {
-  width: 50px;
+  width: 100%;
   height: 50px;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -654,6 +655,7 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  border-radius: 0 50px;
   background: #1d1f48;
   cursor: pointer;
   pointer-events: all;
@@ -662,6 +664,7 @@ header {
 
 .cards-wrapper .slider-control .slider-arrows .slider-arrow.slider-arrow-left {
   margin-right: 15px;
+  border-radius: 50px 0;
 }
 
 .cards-wrapper .slider-control .slider-arrows .slider-arrow.slider-arrow-left .icon-arrow {
@@ -674,9 +677,21 @@ header {
   pointer-events: none;
 }
 
+@media only screen and (min-width: 992px) {
+  .cards-wrapper .slider-control .slider-arrows .slider-arrow {
+    width: 75px;
+  }
+}
+
 .cards-wrapper .slider-control .slider-arrows .icon-arrow {
   width: 20px;
   height: 20px;
+}
+
+@media only screen and (min-width: 992px) {
+  .cards-wrapper .slider-control .slider-arrows {
+    width: auto;
+  }
 }
 
 .cards-container {
