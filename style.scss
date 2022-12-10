@@ -187,7 +187,6 @@ header {
         }
 
         .menu-item {
-            // display: none;
             padding: $padding / 2;
             cursor: pointer;
 
@@ -288,19 +287,9 @@ header {
         min-height: 400px;
         position: relative;
 
-        &.rules {
+        &.page {
             @media #{$bp-md} {
                 min-height: 400px;
-            }
-        }
-
-        &.page {
-            max-width: $maxWidth;
-            margin: 0 auto;
-
-            .image {
-                width: 100%;
-                left: 0;
             }
         }
 
@@ -593,6 +582,12 @@ header {
         }
 
         .info {
+            flex-flow: column;
+
+            h3 {
+                padding: 0 $padding;
+            }
+
             @media #{$bp-md} {
                 width: 50%;
             }
@@ -604,7 +599,8 @@ header {
             }
         }
 
-        .list-title {
+        .list-title,
+        .intro {
             padding-bottom: $padding;
             padding-left: $padding;
         }

@@ -317,19 +317,9 @@ header {
 }
 
 @media only screen and (min-width: 992px) {
-  .banner .banner-wrapper.rules {
+  .banner .banner-wrapper.page {
     min-height: 400px;
   }
-}
-
-.banner .banner-wrapper.page {
-  max-width: 1180px;
-  margin: 0 auto;
-}
-
-.banner .banner-wrapper.page .image {
-  width: 100%;
-  left: 0;
 }
 
 @media only screen and (min-width: 992px) {
@@ -691,6 +681,17 @@ header {
   }
 }
 
+.info-wrapper .row .info {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+.info-wrapper .row .info h3 {
+  padding: 0 30px;
+}
+
 @media only screen and (min-width: 992px) {
   .info-wrapper .row .info {
     width: 50%;
@@ -701,7 +702,8 @@ header {
   padding-right: 30px;
 }
 
-.info-wrapper .row .list-title {
+.info-wrapper .row .list-title,
+.info-wrapper .row .intro {
   padding-bottom: 30px;
   padding-left: 30px;
 }

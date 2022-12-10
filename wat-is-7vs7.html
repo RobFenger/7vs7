@@ -10,12 +10,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&family=Zen+Dots&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/23ac1fdc5c.js" crossorigin="anonymous"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
   </head>
 
   <body>
     <header>
       <div class="header-container">
-        <div class="menu-icon">
+        <div class="menu-icon" onclick="showMenu()">
           <div class="menu-line"></div>
           <div class="menu-line"></div>
           <div class="menu-line"></div>
@@ -26,11 +28,98 @@
           </a>
         </div>
         <div class="nav-menu">
-          <div class="menu-item link">Locatie</div>
-          <div class="menu-item link">Contact</div>
+          <div class="close-menu" onclick="closeMenu()">X</div>
+          <a class="menu-item link" href="location.html">Locatie</a>
+          <a class="menu-item link" href="contact.html">Contact</a>
+          <div class="menu-item dropdown-link">Informatie
+            <div class="dropdown-container">
+              <a class="menu-item link" href="wat-is-7vs7.html">Hoe werkt het?</a>
+              <a class="menu-item link" href="voor-wie.html">Voor wie is het?</a>
+              <a class="menu-item link" href="regels.html">Regels</a>
+              <a class="menu-item link" href="kosten.html">Prijzen</a>
+            </div>
+          </div>
           <a class="menu-item link menu-button" href="form.html">Meld je nu aan!</a>
         </div>
       </div>
     </header>
+
+    <div class="page-wrapper">
+
+      <div class="banner">
+        <div class="banner-wrapper page">
+          <div class="headings">
+            <h2>Hoe werkt</h2>
+            <div class="7v7-wrapper">
+              <h2 class="number">7</h2><h2 class="versus">versus</h2><h2 class="number">7</h2>
+            </div>
+          </div>
+          <div class="image">
+            <img alt="7vs7-banner" src="7vs7-banner.jpg">
+          </div>
+        </div>
+      </div>
+
+      <div class="info-wrapper">
+        <div class="row">
+          <div class="versus-info">
+            <h2 class="list-title">Hoe werkt het?</h2>
+            <h3 class="intro">Denk hierbij aan wat er zelf geregeld moet worden en wat er word geregeld vanuit de organisatie 7 Versus 7</h3>
+          </div>
+        </div>
+        <div class="spacer-sm"></div>
+        <div class="row">
+          <div class="image">
+            <img src="7vs7-image-2.jpg">
+          </div>
+          <div class="info">
+            <h3>Zelf regelen:</h3>
+            <ul class="unordered-list">
+              <li class="list-item"><i class="fa-regular fa-futbol usp-icon"></i>Eigen tenues(Allemaal de zelfde kleur shirt of iets in het thema van je teamnaam)</li>
+              <li class="list-item"><i class="fa-regular fa-futbol usp-icon"></i>Voetbalschoenen, Scheenbeschermers(optioneel), broekjes</li>
+              <li class="list-item"><i class="fa-regular fa-futbol usp-icon"></i>Eigen bal is altijd handig om even op te warmen</li>
+              <li class="list-item"><i class="fa-regular fa-futbol usp-icon"></i>Water</li>
+              <li class="list-item"><i class="fa-regular fa-futbol usp-icon"></i>Logo voor je teamnaam(plaatje van het internet)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="spacer-sm"></div>
+        <div class="row">
+          <div class="info">
+            <h3>Vanuit de organisatie:</h3>
+            <ul class="unordered-list">
+              <li class="list-item"><i class="fa-regular fa-futbol usp-icon"></i>Scheidsrechter</li>
+              <li class="list-item"><i class="fa-regular fa-futbol usp-icon"></i>Wedstrijdbal</li>
+              <li class="list-item"><i class="fa-regular fa-futbol usp-icon"></i>Hesjes(als teams dezelfde kleuren hebben)</li>
+              <li class="list-item"><i class="fa-regular fa-futbol usp-icon"></i>Competitie indeling</li>
+              <li class="list-item"><i class="fa-regular fa-futbol usp-icon"></i>Locatie</li>
+              <li class="list-item"><i class="fa-regular fa-futbol usp-icon"></i>Kantine waar drinken gehaald kan worden</li>
+              <li class="list-item"><i class="fa-regular fa-futbol usp-icon"></i>Kleedkamers</li>
+              <li class="list-item">Zo simpel kan het zijn! Voor eventuele vragen kan er gemaild worden naar info@7versus7.nl</li>
+            </ul>
+          </div>
+          <div class="image">
+            <img src="img-info.jpg">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="spacer-sm"></div>
+    <footer>
+      <div class="footer-container">
+        <img alt="7vs7" src="7V7-logo.png">
+        <div class="footer-menu-items">
+          <a class="menu-item link" href="location.html">Locatie</a>
+          <a class="menu-item link" href="contact.html">Contact</a>
+          <a class="menu-item link" href="wat-is-7vs7.html">Hoe werkt het?</a>
+          <a class="menu-item link" href="voor-wie.html">Voor wie is het?</a>
+          <a class="menu-item link" href="regels.html">Regels</a>
+          <a class="menu-item link" href="kosten.html">Prijzen</a>
+        </div>
+      </div>
+    </footer>
+    <script src="menu.js"></script>
   </body>
 </html>
