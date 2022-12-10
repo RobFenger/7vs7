@@ -436,7 +436,6 @@ header {
 .banner .headings h2 {
   padding-bottom: 15px;
   font-weight: 700;
-  letter-spacing: 6px;
   color: #ffffff;
   -webkit-animation: moveInLeft 1s ease-out;
           animation: moveInLeft 1s ease-out;
@@ -448,6 +447,12 @@ header {
 
 .banner .headings h2.versus {
   color: #0d8537;
+}
+
+@media only screen and (min-width: 992px) {
+  .banner .headings h2 {
+    letter-spacing: 6px;
+  }
 }
 
 @-webkit-keyframes moveInLeft {

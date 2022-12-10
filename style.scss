@@ -382,7 +382,6 @@ header {
         h2 {
             padding-bottom: $padding / 2;
             font-weight: 700;
-            letter-spacing: 6px;
             color: $white;
             animation: moveInLeft 1s ease-out;
 
@@ -392,6 +391,10 @@ header {
 
             &.versus {
                 color: $green;
+            }
+
+            @media #{$bp-md} {
+                letter-spacing: 6px;
             }
         }
 
