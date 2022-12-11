@@ -5,6 +5,7 @@ $cardColor: #eef1f6;
 $lightBlue: #d4d6df;
 $darkBlue: #1d1f48;
 $dotColor: #d8d8d8;
+$color1: #ee1e23;
 $green: #0d8537;
 $greenOpacity: rgba(13, 133, 55, 0.7);
 $headerSize: 70px;
@@ -123,8 +124,32 @@ header {
     top: 0;
     left: 0;
     box-shadow: $boxShadow;
-    background: $white;
+    background: $color1;
     z-index: 10;
+
+    &.header-sm {
+        background: $white;
+
+        .nav-menu {
+            background: $white;
+
+            .menu-item {
+                color: $black;
+
+                &:after {
+                    background: $black;
+                }
+            }
+        }
+
+        .dropdown-container {
+            background: $white;
+        }
+
+        .menu-icon .menu-line {
+            background: $black;
+        }
+    }
 }
 
 .header-container {
@@ -146,7 +171,7 @@ header {
             width: 100%;
             height: 4px;
             margin: 3px 0;
-            background: $black;
+            background: $white;
             transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
@@ -213,25 +238,13 @@ header {
         position: fixed;
         top: 0;
         left: 0;
-        background: $white;
+        background: $color1;
         overflow: auto;
         transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 
-        .close-menu {
-            width: 100%;
-            padding-right: $padding;
-            justify-content: flex-end;
-            font-size: 25px;
-            font-weight: 700;
-            cursor: pointer;
-
-            @media #{$bp-md} {
-                display: none;
-            }
-        }
-
         .menu-item {
             padding: $padding / 2;
+            color: $white;
             cursor: pointer;
 
             &.menu-button {
@@ -246,6 +259,10 @@ header {
                     width: auto;
                     height: 100%;
                 }
+            }
+
+            &:after {
+                background: $white;
             }
 
             &:last-child {
@@ -296,7 +313,7 @@ header {
         padding-bottom: $padding;
         flex-flow: column nowrap;
         align-items: flex-start;
-        background: $white;
+        background: $color1;
 
         .menu-item {
             &:first-child {
@@ -371,7 +388,7 @@ header {
             }
 
             &.versus {
-                color: $green;
+                color: $color1;
             }
 
             @media #{$bp-md} {
@@ -499,35 +516,15 @@ header {
 
 .cards-wrapper {
     width: 100%;
-    max-width: $maxWidth;
-    margin: 0 auto;
+    padding: $padding 0;
     flex-flow: column;
 
     .slider-control {
+        width: 100%;
+        max-width: $maxWidth;
+        margin: 0 auto;
         justify-content: flex-end;
         position: relative;
-
-        .slider-dots {
-            width: 100%;
-            height: 100%;
-            display: none;
-            align-items: center;
-            justify-content: center;
-            position: absolute;
-
-            .dot {
-                width: 15px;
-                height: 15px;
-                margin-right: $padding / 3;
-                border-radius: 5px;
-                background: $dotColor;
-                cursor: pointer;
-
-                &.active {
-                    background: $darkBlue;
-                }
-            }
-        }
 
         .slider-arrows {
             width: 100%;
@@ -573,10 +570,16 @@ header {
             }
         }
     }
+
+    @media #{$bp-md} {
+        background: $cardColor;
+    }
 }
 
 .cards-container {
     width: 100%;
+    max-width: $maxWidth;
+    margin: 0 auto;
     flex-flow: row nowrap;
     justify-content: space-between;
     transition: transform 0.3s;
@@ -587,6 +590,32 @@ header {
         margin-bottom: $padding;
         flex-flow: column nowrap;
         position: relative;
+
+        &:nth-child(odd) .card-body {
+            color: $white;
+            background: $color1;
+
+            .link {
+                color: $white;
+
+                &:after {
+                    background: $white;
+                }
+            }
+        }
+
+        &:nth-child(even) .card-body {
+            color: $color1;
+            background: $white;
+
+            .link {
+                color: $color1;
+
+                &:after {
+                    background: $color1;
+                }
+            }
+        }
 
         &:before {
             @media #{$bp-md} {
@@ -643,7 +672,6 @@ header {
         flex: 1 0 auto;
         flex-flow: column nowrap;
         align-items: flex-start;
-        background: $cardColor;
 
         .card-title {
             font-size: 30px;
@@ -659,6 +687,18 @@ header {
 
 
 // ------------------ Pages -------------
+
+.row {
+    background: $cardColor;
+
+    &:not(.row-no-color) {
+        border-radius: $borderRadius;
+    }
+
+    &.row-no-color {
+        background: transparent;
+    }
+}
 
 .info-wrapper {
     max-width: $maxWidth;
@@ -840,7 +880,7 @@ header {
         margin-top: $padding / 2;
         justify-content: center;
         color: $white;
-        background: $darkBlue;
+        background: $color1;
         cursor: pointer;
     }
 
@@ -885,7 +925,7 @@ footer {
     width: 100%;
     min-height: $headerSize;
     padding: $padding 0;
-    background: $lightBlue;
+    background: $color1;
 
     .footer-container {
         width: 100%;
@@ -914,6 +954,11 @@ footer {
 
         .menu-item {
             margin: $padding / 2;
+            color: $white;
+
+            &:after {
+                background: $white;
+            }
 
             @media #{$bp-md} {
                 margin: $padding $padding / 2;
