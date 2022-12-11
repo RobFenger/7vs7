@@ -185,6 +185,7 @@ header {
             background-repeat: no-repeat;
             background-size: contain;
             transform: translateY(200%);
+            z-index: -1;
             transition: 0.25s ease-in-out;
         }
 
