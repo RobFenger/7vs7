@@ -349,6 +349,14 @@ header {
         min-height: 400px;
         position: relative;
 
+        &.sm {
+            min-height: 250px;
+
+            @media #{$bp-md} {
+                min-height: 600px;
+            }
+        }
+
         &.page {
             @media #{$bp-md} {
                 min-height: 400px;
@@ -605,14 +613,14 @@ header {
         }
 
         &:nth-child(even) .card-body {
-            color: $color1;
+            color: $black;
             background: $white;
 
             .link {
-                color: $color1;
+                color: $black;
 
                 &:after {
-                    background: $color1;
+                    background: $black;
                 }
             }
         }

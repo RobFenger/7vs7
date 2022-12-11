@@ -386,6 +386,16 @@ header.header-sm .menu-icon .menu-line {
   position: relative;
 }
 
+.banner .banner-wrapper.sm {
+  min-height: 250px;
+}
+
+@media only screen and (min-width: 992px) {
+  .banner .banner-wrapper.sm {
+    min-height: 600px;
+  }
+}
+
 @media only screen and (min-width: 992px) {
   .banner .banner-wrapper.page {
     min-height: 400px;
@@ -731,16 +741,16 @@ header.header-sm .menu-icon .menu-line {
 }
 
 .cards-container .card:nth-child(even) .card-body {
-  color: #ee1e23;
+  color: #000000;
   background: #ffffff;
 }
 
 .cards-container .card:nth-child(even) .card-body .link {
-  color: #ee1e23;
+  color: #000000;
 }
 
 .cards-container .card:nth-child(even) .card-body .link:after {
-  background: #ee1e23;
+  background: #000000;
 }
 
 @media only screen and (min-width: 992px) {
