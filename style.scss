@@ -849,6 +849,35 @@ header {
 }
 
 
+// ------------ Location IFrame ---------------
+
+.location-thb {
+    width: 100%;
+    max-width: $maxWidth;
+    margin: 0 auto;
+    flex-flow: column-reverse nowrap;
+    justify-content: flex-start;
+
+    .location-info {
+        padding-bottom: $padding / 2;
+        flex-flow: column;
+
+        h3,
+        p {
+            margin: 0;
+        }
+
+        @media #{$bp-md} {
+            padding: $padding;
+        }
+    }
+
+    @media #{$bp-md} {
+        flex-flow: row;
+    }
+}
+
+
 //---------------- Footer ------------------
 
 footer {
