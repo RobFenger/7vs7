@@ -95,6 +95,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
+  border-bottom: 2px #ffffff solid;
   -webkit-box-shadow: 0 4px 15px rgba(43, 126, 179, 0.2);
           box-shadow: 0 4px 15px rgba(43, 126, 179, 0.2);
   background: #ee1e23;
@@ -102,6 +103,7 @@ header {
 }
 
 header.header-sm {
+  border-bottom: 2px #ee1e23 solid;
   background: #ffffff;
 }
 
@@ -442,7 +444,7 @@ header.header-sm .menu-icon .menu-line {
 }
 
 .banner .headings h1.number {
-  color: #000000;
+  color: #ee1e23;
 }
 
 .banner .headings h1.versus {
@@ -465,11 +467,11 @@ header.header-sm .menu-icon .menu-line {
 }
 
 .banner .headings h2.number {
-  color: #000000;
+  color: #ffffff;
 }
 
 .banner .headings h2.versus {
-  color: #0d8537;
+  color: #ffffff;
 }
 
 @media only screen and (min-width: 992px) {
@@ -1194,5 +1196,89 @@ footer .footer-container .menu-item:after {
   footer .footer-container .menu-item {
     margin: 30px 15px;
   }
+}
+
+.for-who-wrapper {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+}
+
+.for-who-wrapper .intro {
+  max-width: 780px;
+  padding-bottom: 30px;
+  margin: 0 auto;
+  font-weight: 700;
+}
+
+.for-who-wrapper .row-for-who {
+  max-width: 780px;
+  padding: 10px 0;
+  margin-bottom: 30px;
+  position: relative;
+  border-radius: 5px;
+}
+
+.for-who-wrapper .row-for-who:before {
+  content: '';
+  width: 4px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background: #1d1f48;
+}
+
+.for-who-wrapper .row-for-who:nth-child(even) {
+  margin-left: auto;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-flow: row-reverse nowrap;
+          flex-flow: row-reverse nowrap;
+  border: 2px solid #1d1f48;
+}
+
+.for-who-wrapper .row-for-who:nth-child(even):before {
+  right: 35px;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+}
+
+.for-who-wrapper .row-for-who:nth-child(odd) {
+  margin-right: auto;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  border: 2px solid #1d1f48;
+}
+
+.for-who-wrapper .row-for-who:nth-child(odd):before {
+  left: 35px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.for-who-wrapper .row-for-who .for-who-text {
+  margin: 15px;
+  margin-left: 30px;
+}
+
+.for-who-wrapper .symbol {
+  width: 100px;
+  margin: 0 15px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.for-who-wrapper .symbol .circle {
+  width: 40px;
+  height: 40px;
+  border: #1d1f48 4px solid;
+  border-radius: 40px;
 }
 /*# sourceMappingURL=style.css.map */

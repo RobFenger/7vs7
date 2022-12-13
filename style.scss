@@ -123,11 +123,13 @@ header {
     position: fixed;
     top: 0;
     left: 0;
+    border-bottom: 2px $white solid;
     box-shadow: $boxShadow;
     background: $color1;
     z-index: 10;
 
     &.header-sm {
+        border-bottom: 2px $color1 solid;
         background: $white;
 
         .nav-menu {
@@ -392,7 +394,7 @@ header {
             line-height: $h1LineHeightMobile;
 
             &.number {
-                color: $black;
+                color: $color1;
             }
 
             &.versus {
@@ -412,11 +414,11 @@ header {
             animation: moveInLeft 1s ease-out;
 
             &.number {
-                color: $black;
+                color: $white;
             }
 
             &.versus {
-                color: $green;
+                color: $white;
             }
 
             @media #{$bp-md} {
@@ -971,6 +973,82 @@ footer {
             @media #{$bp-md} {
                 margin: $padding $padding / 2;
             }
+        }
+    }
+}
+
+
+// ---- For Who -----------
+
+$circleWidth: 40px;
+
+.for-who-wrapper {
+    width: 100%;
+    max-width: $maxWidth;
+    margin: 0 auto;
+    flex-flow: column nowrap;
+
+    .intro {
+        max-width: 780px;
+        padding-bottom: $padding;
+        margin: 0 auto;
+        font-weight: 700;
+    }
+
+    .row-for-who {
+        max-width: 780px;
+        padding: $padding / 3 0;
+        margin-bottom: $padding;
+        position: relative;
+        border-radius: $borderRadius;
+
+        &:before {
+            content: '';
+            width: 4px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            background: $darkBlue;
+        }
+
+        &:nth-child(even) {
+            margin-left: auto;
+            flex-flow: row-reverse nowrap;
+            border: 2px solid $darkBlue;
+
+            &:before {
+                right: $padding / 2 + $circleWidth / 2;
+                transform: translateX(50%);
+            }
+        }
+
+        &:nth-child(odd) {
+            margin-right: auto;
+            flex-flow: row nowrap;
+            border: 2px solid $darkBlue;
+
+            &:before {
+                left: $padding / 2 + $circleWidth / 2;
+                transform: translateX(-50%);
+            }
+        }
+
+        .for-who-text {
+            margin: $padding / 2;
+            margin-left: $padding;
+        }
+    }
+
+    .symbol {
+        width: 100px;
+        margin: 0 $padding / 2;
+        align-items: center;
+
+        .circle {
+            width: $circleWidth;
+            height: $circleWidth;
+            border: $darkBlue 4px solid;
+            border-radius: $circleWidth;
         }
     }
 }
