@@ -20,7 +20,7 @@ function animateUp() {
 
 function displayForm() {
   formContainer.classList.remove("form-is-closed");
-  btnSubmit.innerHTML = "Verstuur aanmelding"
+  btnSubmit.style.zIndex = 1;
   if (formContainer.classList.contains("hide-form")) {
     clearInterval(animate);
   };

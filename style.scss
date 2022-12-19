@@ -883,12 +883,29 @@ header {
         display: none;
     }
 
+    .buttons {
+        margin-top: $padding / 2;
+        position: relative;
+    }
+
     .submit-button {
         width: 100%;
         min-height: $buttonMinHeight;
         padding: $padding / 2;
-        margin-top: $padding / 2;
         justify-content: center;
+        border: 0;
+        font-size: $fontSize;
+        line-height: 25px;
+        color: $white;
+        background: $color1;
+        cursor: pointer;
+    }
+
+    .sub-button {
+        width: 100%;
+        padding: $padding / 2;
+        justify-content: center;
+        position: absolute;
         color: $white;
         background: $color1;
         cursor: pointer;
