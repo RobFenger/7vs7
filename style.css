@@ -1,3 +1,19 @@
+@font-face {
+  src: url("GorillasSansDisplay-Bold.eot");
+  src: url("GorillasSansDisplay-Bold.eot?#iefix") format("embedded-opentype"), url("GorillasSansDisplay-Bold.svg#GorillasSansDisplay-Bold") format("svg"), url("GorillasSansDisplay-Bold.ttf") format("truetype"), url("GorillasSansDisplay-Bold.woff") format("woff"), url("GorillasSansDisplay-Bold.woff2") format("woff2");
+  font-family: "GorillasSansDisplay-Bold";
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  src: url("DrukText-Super.eot");
+  src: url("DrukText-Super.eot?#iefix") format("embedded-opentype"), url("DrukText-Super.svg#DrukText-Super") format("svg"), url("DrukText-Super.ttf") format("truetype"), url("DrukText-Super.woff") format("woff"), url("DrukText-Super.woff2") format("woff2");
+  font-family: "DrukText-Super";
+  font-style: normal;
+  font-weight: normal;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -98,12 +114,12 @@ header {
   border-bottom: 2px #ffffff solid;
   -webkit-box-shadow: 0 4px 15px rgba(43, 126, 179, 0.2);
           box-shadow: 0 4px 15px rgba(43, 126, 179, 0.2);
-  background: #ee1e23;
+  background: #e30d13;
   z-index: 10;
 }
 
 header.header-sm {
-  border-bottom: 2px #ee1e23 solid;
+  border-bottom: 2px #e30d13 solid;
   background: #ffffff;
 }
 
@@ -192,11 +208,11 @@ header.header-sm .menu-icon .menu-line {
 .header-container .logo:before {
   content: '';
   width: 83px;
-  height: 46px;
+  height: 70px;
   position: absolute;
   bottom: 50%;
   left: 0;
-  background-image: url("7V7-logo.png");
+  background-image: url("7V7-logo-haarlem.png");
   background-repeat: no-repeat;
   background-size: contain;
   -webkit-transform: translateY(200%);
@@ -217,7 +233,7 @@ header.header-sm .menu-icon .menu-line {
 }
 
 .header-container .logo img {
-  max-height: 40px;
+  max-height: 70px;
   -webkit-transition: 0.25s ease-in-out;
   transition: 0.25s ease-in-out;
 }
@@ -236,7 +252,7 @@ header.header-sm .menu-icon .menu-line {
   position: fixed;
   top: 0;
   left: 0;
-  background: #ee1e23;
+  background: #e30d13;
   overflow: auto;
   -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
   transition: -webkit-transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -350,7 +366,7 @@ header.header-sm .menu-icon .menu-line {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  background: #ee1e23;
+  background: #e30d13;
 }
 
 .header-container .dropdown-container .menu-item:first-child {
@@ -438,17 +454,17 @@ header.header-sm .menu-icon .menu-line {
 }
 
 .banner .headings h1 {
-  font-family: "Zen Dots";
+  font-family: "GorillasSansDisplay-Bold";
   font-size: 48px;
   line-height: 48px;
 }
 
 .banner .headings h1.number {
-  color: #ee1e23;
+  color: #e30d13;
 }
 
 .banner .headings h1.versus {
-  color: #ee1e23;
+  color: #e30d13;
 }
 
 @media only screen and (min-width: 992px) {
@@ -460,6 +476,7 @@ header.header-sm .menu-icon .menu-line {
 
 .banner .headings h2 {
   padding-bottom: 15px;
+  font-family: "DrukText-Super";
   font-weight: 700;
   color: #ffffff;
   -webkit-animation: moveInLeft 1s ease-out;
@@ -731,7 +748,7 @@ header.header-sm .menu-icon .menu-line {
 
 .cards-container .card:nth-child(odd) .card-body {
   color: #ffffff;
-  background: #ee1e23;
+  background: #e30d13;
 }
 
 .cards-container .card:nth-child(odd) .card-body .link {
@@ -831,6 +848,7 @@ header.header-sm .menu-icon .menu-line {
 }
 
 .cards-container .card-body .card-title {
+  font-family: "DrukText-Super";
   font-size: 30px;
   line-height: 30px;
 }
@@ -1089,7 +1107,7 @@ header.header-sm .menu-icon .menu-line {
   font-size: 16px;
   line-height: 25px;
   color: #ffffff;
-  background: #ee1e23;
+  background: #e30d13;
   cursor: pointer;
 }
 
@@ -1101,7 +1119,7 @@ header.header-sm .menu-icon .menu-line {
           justify-content: center;
   position: absolute;
   color: #ffffff;
-  background: #ee1e23;
+  background: #e30d13;
   cursor: pointer;
 }
 
@@ -1156,7 +1174,7 @@ footer {
   width: 100%;
   min-height: 70px;
   padding: 30px 0;
-  background: #ee1e23;
+  background: #e30d13;
 }
 
 footer .footer-container {
@@ -1171,7 +1189,7 @@ footer .footer-container {
 }
 
 footer .footer-container img {
-  max-width: 100%;
+  max-width: 200px;
   padding: 15px;
   margin-bottom: 15px;
 }
@@ -1213,7 +1231,7 @@ footer .footer-container .menu-item:after {
 
 @media only screen and (min-width: 992px) {
   footer .footer-container .menu-item {
-    margin: 30px 15px;
+    margin: 0 15px;
   }
 }
 

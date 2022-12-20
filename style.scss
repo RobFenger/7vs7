@@ -1,3 +1,24 @@
+@mixin fonts($font: 'OpenSans', $font-family: 'Open Sans', $font-style: normal, $font-weight: normal, $font-display: "") {
+    @font-face {
+        src: url($font + '.eot');
+        src: url($font + '.eot?#iefix') format('embedded-opentype'),
+        url($font + '.svg#' + $font) format('svg'),
+        url($font + '.ttf') format('truetype'),
+        url($font + '.woff') format('woff'),
+        url($font + '.woff2') format('woff2');
+        font-family: $font-family;
+        font-style: $font-style;
+        font-weight: $font-weight;
+
+        @if $font-display != "" {
+            font-display: unquote($font-display);
+        }
+    }
+}
+
+@include fonts ("GorillasSansDisplay-Bold", "GorillasSansDisplay-Bold");
+@include fonts ("DrukText-Super", "DrukText-Super");
+
 $bp-md: "only screen and (min-width: 992px)";
 $black: #000000;
 $white: #ffffff;
@@ -5,12 +26,12 @@ $cardColor: #eef1f6;
 $lightBlue: #d4d6df;
 $darkBlue: #1d1f48;
 $dotColor: #d8d8d8;
-$color1: #ee1e23;
+$color1: #e30d13;
 $green: #0d8537;
 $greenOpacity: rgba(13, 133, 55, 0.7);
 $headerSize: 70px;
 $padding: 30px;
-$h1FontFamily: 'Zen Dots';
+$h1FontFamily: 'GorillasSansDisplay-Bold';
 $fontFamily: 'Ubuntu';
 $h1FontSize: 83px;
 $h1FontSizeMobile: 48px;
@@ -204,11 +225,11 @@ header {
         &:before {
             content: '';
             width: 83px;
-            height: 46px;
+            height: $headerSize;
             position: absolute;
             bottom: 50%;
             left: 0;
-            background-image: url('7V7-logo.png');
+            background-image: url('7V7-logo-haarlem.png');
             background-repeat: no-repeat;
             background-size: contain;
             transform: translateY(200%);
@@ -225,7 +246,7 @@ header {
         }
 
         img {
-            max-height: $headerSize - $padding;
+            max-height: $headerSize;
             transition: 0.25s ease-in-out;
         }
     }
@@ -409,6 +430,7 @@ header {
 
         h2 {
             padding-bottom: $padding / 2;
+            font-family: "DrukText-Super";
             font-weight: 700;
             color: $white;
             animation: moveInLeft 1s ease-out;
@@ -684,6 +706,7 @@ header {
         align-items: flex-start;
 
         .card-title {
+            font-family: "DrukText-Super";
             font-size: 30px;
             line-height: 30px;
         }
@@ -960,7 +983,7 @@ footer {
         align-items: center;
 
         img {
-            max-width: 100%;
+            max-width: 200px;
             padding: $padding / 2;
             margin-bottom: $padding / 2;
 
@@ -988,7 +1011,7 @@ footer {
             }
 
             @media #{$bp-md} {
-                margin: $padding $padding / 2;
+                margin: 0 $padding / 2;
             }
         }
     }
