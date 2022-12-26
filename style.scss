@@ -25,6 +25,7 @@ $white: #ffffff;
 $cardColor: #eef1f6;
 $lightBlue: #d4d6df;
 $darkBlue: #1d1f48;
+$darkBlueOpacity: rgba(29, 31, 72, 0.5);
 $dotColor: #d8d8d8;
 $color1: #e30d13;
 $green: #0d8537;
@@ -381,8 +382,27 @@ header {
         }
 
         &.page {
+            .headings h1,
+            .headings h2 {
+                color: $white;
+            }
+
             @media #{$bp-md} {
                 min-height: 400px;
+            }
+        }
+
+        &.player {
+            background: $lightBlue;
+            z-index: -2;
+
+            h1,
+            .seven-wrapper h2 {
+                color: $darkBlue;
+            }
+
+            .image {
+                width: 33vw;
             }
         }
 
@@ -415,11 +435,11 @@ header {
             line-height: $h1LineHeightMobile;
 
             &.number {
-                color: $color1;
+                color: $darkBlue;
             }
 
             &.versus {
-                color: $color1;
+                color: $darkBlue;
             }
 
             @media #{$bp-md} {
@@ -432,7 +452,7 @@ header {
             padding-bottom: $padding / 2;
             font-family: "DrukText-Super";
             font-weight: 700;
-            color: $white;
+            color: $darkBlue;
             animation: moveInLeft 1s ease-out;
 
             &.number {
@@ -688,7 +708,7 @@ header {
 
         .logo-in-card {
             width: auto;
-            height: 35px;
+            height: 40px;
             position: absolute;
             right: $padding;
             bottom: $padding;
@@ -909,6 +929,7 @@ header {
     .buttons {
         margin-top: $padding / 2;
         position: relative;
+        font-weight: 700;
     }
 
     .submit-button {
@@ -918,6 +939,7 @@ header {
         justify-content: center;
         border: 0;
         font-size: $fontSize;
+        font-weight: 700;
         line-height: 25px;
         color: $white;
         background: $color1;
@@ -1090,5 +1112,44 @@ $circleWidth: 40px;
             border: $darkBlue 4px solid;
             border-radius: $circleWidth;
         }
+    }
+}
+
+
+// --------------- Contact ------------
+
+.contact-person {
+    flex-flow: column nowrap;
+
+    .contact-person-image {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .contact-person-text {
+        padding: $padding 0;
+        flex-flow: column nowrap;
+
+        @media #{$bp-md} {
+            padding: $padding;
+            flex-flow: row nowrap;
+        }
+    }
+
+    .mail-to {
+        font-weight: 700;
+        text-decoration: none;
+        color: $darkBlue;
+
+        @media #{$bp-md} {
+            padding-left: $padding / 2;
+        }
+    }
+
+    @media #{$bp-md} {
+        width: 100%;
+        max-width: $maxWidth;
+        margin: 0 auto;
+        flex-flow: row nowrap;
     }
 }
