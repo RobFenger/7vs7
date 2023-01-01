@@ -406,6 +406,41 @@ header.header-sm .menu-icon .menu-line {
   }
 }
 
+.lang-switch {
+  padding: 15px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  border-radius: 5px;
+  font-weight: 700;
+  color: #ffffff;
+  background: #1d1f48;
+}
+
+.lang-switch a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.lang-switch .non-active {
+  opacity: 0.7;
+}
+
+.lang-switch .nl {
+  padding-right: 10px;
+}
+
+.lang-switch .en {
+  padding-left: 10px;
+}
+
+@media only screen and (min-width: 992px) {
+  .lang-switch {
+    top: 30px;
+    right: 30px;
+  }
+}
+
 .banner {
   width: 100%;
 }

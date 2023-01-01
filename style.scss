@@ -373,6 +373,39 @@ header {
 
 //-------------------- Banner -----------
 
+.lang-switch {
+    padding: $padding / 2;
+    position: absolute;
+    top: $padding / 2;
+    right: $padding / 2;
+    border-radius: $borderRadius;
+    font-weight: 700;
+    color: $white;
+    background: $darkBlue;
+
+    a {
+        text-decoration: none;
+        color: $white;
+    }
+
+    .non-active {
+        opacity: 0.7;
+    }
+
+    .nl {
+        padding-right: $padding / 3;
+    }
+
+    .en {
+        padding-left: $padding / 3;
+    }
+
+    @media #{$bp-md} {
+        top: $padding;
+        right: $padding;
+    }
+}
+
 .banner {
     width: 100%;
 
