@@ -94,10 +94,10 @@ h2 {
     padding-top: $headerSize;
     margin: 0 auto;
     flex-flow: column nowrap;
-    overflow: hidden;
 
     @media #{$bp-md} {
         width: 100%;
+        overflow: hidden;
     }
 }
 
@@ -135,6 +135,14 @@ h2 {
 .spacer-sm {
     width: 100%;
     height: $spacerSm;
+
+    &.desktop {
+        display: none;
+
+        @media #{$bp-md} {
+            display: flex;
+        }
+    }
 }
 
 
@@ -401,6 +409,14 @@ header {
                 color: $darkBlue;
             }
 
+            .headings {
+                align-items: flex-end;
+
+                @media #{$bp-md} {
+                    align-items: center;
+                }
+            }
+
             .image {
                 width: 33vw;
             }
@@ -417,7 +433,7 @@ header {
         padding: $padding / 2;
         flex-flow: column nowrap;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-end;
 
         .seven-wrapper {
             animation: moveInRight 1s ease-out;
@@ -466,6 +482,10 @@ header {
             @media #{$bp-md} {
                 letter-spacing: 6px;
             }
+        }
+
+        @media #{$bp-md} {
+            justify-content: center;
         }
 
         @keyframes moveInLeft {
@@ -534,6 +554,7 @@ header {
     width: 100%;
     max-width: $maxWidth;
     margin: 0 auto;
+    display: none;
     flex-flow: row wrap;
     justify-content: flex-start;
 
@@ -561,6 +582,10 @@ header {
     .usp-icon {
         margin-right: $padding / 3;
     }
+
+    @media #{$bp-md} {
+        display: flex;
+    }
 }
 
 
@@ -575,6 +600,7 @@ header {
         width: 100%;
         max-width: $maxWidth;
         margin: 0 auto;
+        display: none;
         justify-content: flex-end;
         position: relative;
 
@@ -624,6 +650,7 @@ header {
     }
 
     @media #{$bp-md} {
+        display: flex;
         background: $cardColor;
     }
 }
@@ -632,7 +659,7 @@ header {
     width: 100%;
     max-width: $maxWidth;
     margin: 0 auto;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
     justify-content: space-between;
     transition: transform 0.3s;
 
@@ -735,6 +762,10 @@ header {
             margin-top: auto;
             font-size: 18px;
         }
+    }
+
+    @media #{$bp-md} {
+        flex-flow: row nowrap;
     }
 }
 

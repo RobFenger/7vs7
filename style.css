@@ -66,12 +66,12 @@ h2 {
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
-  overflow: hidden;
 }
 
 @media only screen and (min-width: 992px) {
   .page-wrapper {
     width: 100%;
+    overflow: hidden;
   }
 }
 
@@ -104,6 +104,18 @@ h2 {
 .spacer-sm {
   width: 100%;
   height: 40px;
+}
+
+.spacer-sm.desktop {
+  display: none;
+}
+
+@media only screen and (min-width: 992px) {
+  .spacer-sm.desktop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 header {
@@ -435,6 +447,20 @@ header.header-sm .menu-icon .menu-line {
   color: #1d1f48;
 }
 
+.banner .banner-wrapper.player .headings {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+@media only screen and (min-width: 992px) {
+  .banner .banner-wrapper.player .headings {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .banner .banner-wrapper.player .image {
   width: 33vw;
 }
@@ -456,9 +482,9 @@ header.header-sm .menu-icon .menu-line {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .banner .headings .seven-wrapper {
@@ -513,6 +539,14 @@ header.header-sm .menu-icon .menu-line {
 @media only screen and (min-width: 992px) {
   .banner .headings h2 {
     letter-spacing: 6px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .banner .headings {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -617,6 +651,7 @@ header.header-sm .menu-icon .menu-line {
   width: 100%;
   max-width: 1180px;
   margin: 0 auto;
+  display: none;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
@@ -659,6 +694,14 @@ header.header-sm .menu-icon .menu-line {
   margin-right: 10px;
 }
 
+@media only screen and (min-width: 992px) {
+  .usps {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 .cards-wrapper {
   width: 100%;
   padding: 30px 0;
@@ -672,6 +715,7 @@ header.header-sm .menu-icon .menu-line {
   width: 100%;
   max-width: 1180px;
   margin: 0 auto;
+  display: none;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
@@ -733,6 +777,9 @@ header.header-sm .menu-icon .menu-line {
 
 @media only screen and (min-width: 992px) {
   .cards-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     background: #eef1f6;
   }
 }
@@ -741,10 +788,10 @@ header.header-sm .menu-icon .menu-line {
   width: 100%;
   max-width: 1180px;
   margin: 0 auto;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -875,6 +922,15 @@ header.header-sm .menu-icon .menu-line {
 .cards-container .card-body .link {
   margin-top: auto;
   font-size: 18px;
+}
+
+@media only screen and (min-width: 992px) {
+  .cards-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+  }
 }
 
 .row {
