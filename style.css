@@ -1254,6 +1254,16 @@ header.header-sm .menu-icon .menu-line {
           justify-content: flex-start;
 }
 
+.location-thb iframe {
+  width: 100%;
+}
+
+@media only screen and (min-width: 992px) {
+  .location-thb iframe {
+    width: 600px;
+  }
+}
+
 .location-thb .location-info {
   padding-bottom: 15px;
   -webkit-box-orient: vertical;
