@@ -2,7 +2,7 @@
 
 <html>
 <head>
-    <title>7vs7 Formulier</title>
+    <title>7vs7 Form</title>
     <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
     <link rel="icon" type="image/png" href="7V7-logo.png" sizes="16x16">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,17 +27,17 @@
             </a>
         </div>
         <div class="nav-menu">
-            <a class="menu-item link" href="location.html">Locatie</a>
+            <a class="menu-item link" href="location.html">Location</a>
             <a class="menu-item link" href="contact.html">Contact</a>
-            <div class="menu-item dropdown-link">Informatie
-                <div class="dropdown-container">
-                    <a class="menu-item link" href="how-does-it-work.html">Hoe werkt het?</a>
-                    <a class="menu-item link" href="for-who.html">Voor wie is het?</a>
-                    <a class="menu-item link" href="rules.html">Regels</a>
-                    <a class="menu-item link" href="costs.html">Wat kost het?</a>
-                </div>
+            <div class="menu-item dropdown-link">Information
+              <div class="dropdown-container">
+                <a class="menu-item link" href="how-does-it-work.html">How does it work?</a>
+                <a class="menu-item link" href="for-who.html">For who is it?</a>
+                <a class="menu-item link" href="rules.html">Rules</a>
+                <a class="menu-item link" href="costs.html">What does it cost?</a>
+              </div>
             </div>
-            <a class="menu-item link menu-button" href="form.html">Meld je nu aan!</a>
+            <a class="menu-item link menu-button" href="form.html">Subscribe now!</a>
         </div>
     </div>
 </header>
@@ -52,66 +52,66 @@
                     <h1 class="versus">versus</h1>
                     <h1 class="number">7</h1>
                 </div>
-                <h2>Het haarlemse voetbaltoernooi!</h2>
+                <h2>The Haarlem Soccer tournament!</h2>
             </div>
             <div class="form-container">
                 <form action="https://app.7versus7.nl/api/aanmelden" method="POST" class="submit-form" id="versus-form">
                     <div class="form-input">
-                        <label for="voornaam" class="label">Voornaam (Verplicht)</label>
+                        <label for="voornaam" class="label">First Name (Required)</label>
                         <input id="voornaam" name="voornaam" class="input first-name" placeholder="Voornaam">
                     </div>
                     <div class="form-input">
-                        <label for="achternaam" class="label">Achternaam (Verplicht)</label>
+                        <label for="achternaam" class="label">Last Name (Required)</label>
                         <input id="achternaam" name="achternaam" class="input last-name" placeholder="Achternaam">
                     </div>
                     <div class="form-input">
-                        <label for="telefoon" class="label">Telefoonnummer (Verplicht)</label>
+                        <label for="telefoon" class="label">Phone number (Required)</label>
                         <input id="telefoon" name="telefoon" class="input phone-number" placeholder="Telefoonnummer">
                     </div>
                     <div class="form-input">
-                        <label for="email" class="label">Emailadres (Verplicht)</label>
+                        <label for="email" class="label">Emailaddress (Required)</label>
                         <input id="email" name="email" class="input email-address" placeholder="Emailadres">
                     </div>
                     <div class="radio-label">
-                        Wil je je inschrijven als team of als individu?
+                        Do you want to register as a team or as an individual?
                     </div>
                     <div class="form-input">
                         <div class="radio-button">
                             <input type="radio" id="vriendenteam" name="team_type" value="vriendenteam"
                                    onchange="showTeam()">
-                            <label for="vriendenteam">Vriendenteam</label>
+                            <label for="vriendenteam">Team</label>
                         </div>
                         <div class="radio-button">
                             <input type="radio" id="individueel" name="team_type" value="individueel"
                                    onchange="hideTeam()">
-                            <label for="individueel">Individueel</label>
+                            <label for="individueel">Individual</label>
                         </div>
                         <div class="radio-button">
                             <input type="radio" id="bedrijfsteam" name="team_type" value="bedrijfsteam"
                                    onchange="showTeam()">
-                            <label for="bedrijfsteam">Bedrijfsteam</label>
+                            <label for="bedrijfsteam">Companyteam</label>
                         </div>
                     </div>
                     <div class="form-input team-name-input">
-                        <label for="team_naam" class="label">Teamnaam (Optioneel)</label>
+                        <label for="team_naam" class="label">Teamname (Optional)</label>
                         <input id="team_naam" name="team_naam" class="input team-name" placeholder="Teamnaam">
                     </div>
                     <div class="form-input">
                         <div class="radio-button">
                             <input type="radio" id="klasse_hoog" name="klasse" value="hoog">
-                            <label for="klasse_hoog">Hoge Klasse</label>
+                            <label for="klasse_hoog">High League</label>
                         </div>
                         <div class="radio-button">
                             <input type="radio" id="klasse_laag" name="klasse" value="laag">
-                            <label for="klasse_laag">Lage Klasse</label>
+                            <label for="klasse_laag">Low League</label>
                         </div>
                     </div>
                     <div class="buttons">
                         <button class="submit-button" form="versus-form" type="submit">
-                            Verstuur aanmelding!
+                            Send subscription!
                         </button>
                         <div class="sub-button" onclick="displayForm()">
-                            Meld je nu aan!
+                            Subscribe now!
                         </div>
                     </div>
                 </form>
@@ -130,12 +130,12 @@
     <div class="footer-container">
         <img alt="7vs7" src="../7V7-logo.png">
         <div class="footer-menu-items">
-            <a class="menu-item link" href="location.html">Locatie</a>
-            <a class="menu-item link" href="contact.html">Contact</a>
-            <a class="menu-item link" href="how-does-it-work.html">Hoe werkt het?</a>
-            <a class="menu-item link" href="for-who.html">Voor wie is het?</a>
-            <a class="menu-item link" href="rules.html">Regels</a>
-            <a class="menu-item link" href="costs.html">Wat kost het?</a>
+          <a class="menu-item link" href="location.html">Location</a>
+          <a class="menu-item link" href="contact.html">Contact</a>
+          <a class="menu-item link" href="how-does-it-work.html">How does it work?</a>
+          <a class="menu-item link" href="for-who.html">For who is it?</a>
+          <a class="menu-item link" href="rules.html">Rules</a>
+          <a class="menu-item link" href="costs.html">What does it cost?</a>
         </div>
     </div>
 </footer>
