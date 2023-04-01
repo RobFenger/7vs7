@@ -472,32 +472,63 @@ header.header-sm .menu-icon .menu-line {
   }
 }
 
-.banner .banner-wrapper.player {
+.banner .banner-wrapper.player.sm {
+  min-height: 450px;
   background: #d4d6df;
   z-index: -2;
 }
 
-.banner .banner-wrapper.player h1,
-.banner .banner-wrapper.player .seven-wrapper h2 {
+.banner .banner-wrapper.player.sm h1,
+.banner .banner-wrapper.player.sm .seven-wrapper h2 {
   color: #1d1f48;
 }
 
-.banner .banner-wrapper.player .headings {
+.banner .banner-wrapper.player.sm .headings {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
 }
 
 @media only screen and (min-width: 992px) {
-  .banner .banner-wrapper.player .headings {
+  .banner .banner-wrapper.player.sm .headings {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
   }
 }
 
-.banner .banner-wrapper.player .image {
-  width: 33vw;
+.banner .banner-wrapper.player.sm .image {
+  width: 100%;
+  left: 0;
+}
+
+.banner .banner-wrapper.player.sm .image.img-right {
+  display: none;
+  right: calc(50% - 50vw);
+  left: auto;
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
+
+@media only screen and (min-width: 992px) {
+  .banner .banner-wrapper.player.sm .image.img-right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .banner .banner-wrapper.player.sm .image {
+    width: 33vw;
+    left: calc(50% - 50vw);
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .banner .banner-wrapper.player.sm {
+    min-height: 600px;
+  }
 }
 
 @media only screen and (min-width: 992px) {
@@ -687,6 +718,7 @@ header.header-sm .menu-icon .menu-line {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  text-align: center;
 }
 
 .usps {

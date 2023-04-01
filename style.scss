@@ -433,7 +433,8 @@ header {
             }
         }
 
-        &.player {
+        &.player.sm {
+            min-height: 450px;
             background: $lightBlue;
             z-index: -2;
 
@@ -451,7 +452,28 @@ header {
             }
 
             .image {
-                width: 33vw;
+                width: 100%;
+                left: 0;
+
+                &.img-right {
+                    display: none;
+                    right: calc(50% - 50vw);
+                    left: auto;
+                    transform: scaleX(-1);
+
+                    @media #{$bp-md} {
+                        display: flex;
+                    }
+                }
+
+                @media #{$bp-md} {
+                    width: 33vw;
+                    left: calc(50% - 50vw);
+                }
+            }
+
+            @media #{$bp-md} {
+                min-height: 600px;
             }
         }
 
@@ -583,6 +605,7 @@ header {
 .intro-text-home {
     padding: 0 $padding / 2;
     justify-content: center;
+    text-align: center;
 }
 
 
