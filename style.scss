@@ -580,6 +580,11 @@ header {
     }
 }
 
+.intro-text-home {
+    padding: 0 $padding / 2;
+    justify-content: center;
+}
+
 
 // ------------------ USPS ----------------
 
@@ -680,11 +685,10 @@ header {
                 width: auto;
             }
         }
-    }
 
-    @media #{$bp-md} {
-        display: flex;
-        background: $cardColor;
+        @media #{$bp-md} {
+            display: flex;
+        }
     }
 }
 
@@ -818,6 +822,7 @@ header {
 }
 
 .info-wrapper {
+    width: 100%;
     max-width: $maxWidth;
     margin: 0 auto;
     flex-flow: column nowrap;
@@ -835,20 +840,32 @@ header {
     .row {
         flex-flow: column nowrap;
 
-        &.second {
-            @media #{$bp-md} {
-                flex-flow: row-reverse nowrap;
-            }
-        }
-
         .image {
             img {
                 width: 100%;
-                border-radius: $borderRadius;
+                border-radius: $borderRadius $borderRadius 0 0;
+
+                @media #{$bp-md} {
+                    border-radius: $borderRadius 0 0 $borderRadius;
+                }
             }
 
             @media #{$bp-md} {
                 width: 50%;
+            }
+        }
+
+        &.second {
+            .image {
+                img {
+                    @media #{$bp-md} {
+                        border-radius: 0 $borderRadius $borderRadius 0;
+                    }
+                }
+            }
+
+            @media #{$bp-md} {
+                flex-flow: row-reverse nowrap;
             }
         }
 
@@ -904,6 +921,64 @@ header {
         padding-top: $padding;
         margin-top: -120px;
         border-radius: 50px;
+    }
+}
+
+
+//------------------ Price Table ------------
+
+.price-table {
+    width: 100%;
+    flex-flow: column nowrap;
+
+    @media #{$bp-md} {
+        padding: $padding;
+    }
+}
+
+.table-row {
+    &:first-child {
+        .col-1 {
+            border-top: 0;
+            background: $lightBlue;
+        }
+
+        .col-2 {
+            border-top: 0;
+            font-weight: bold;
+        }
+    }
+
+    &:last-child {
+        .cell {
+            border-bottom: 0;
+        }
+    }
+}
+
+.cell {
+    padding: $padding / 2;
+    flex: 1 0 auto;
+    border: 1px solid black;
+
+    &.col-1 {
+        max-width: 50%;
+        border-left: 0;
+        font-weight: bold;
+    }
+
+    &.col-2 {
+        max-width: 50%;
+        border-right: 0;
+
+        @media #{$bp-md} {
+            min-width: 200px;
+            max-width: 200px;
+        }
+    }
+
+    @media #{$bp-md} {
+        padding: $padding / 2 $padding;
     }
 }
 
@@ -1028,7 +1103,7 @@ header {
 
 // ------------ Location IFrame ---------------
 
-.location-thb {
+.location-og {
     width: 100%;
     max-width: $maxWidth;
     margin: 0 auto;
@@ -1174,7 +1249,7 @@ $circleWidth: 40px;
     }
 
     .symbol {
-        width: 100px;
+        max-width: 100px;
         margin: 0 $padding / 2;
         align-items: center;
 
@@ -1208,20 +1283,19 @@ $circleWidth: 40px;
         }
     }
 
-    .mail-to {
-        font-weight: 700;
-        text-decoration: none;
-        color: $darkBlue;
-
-        @media #{$bp-md} {
-            padding-left: $padding / 2;
-        }
-    }
-
     @media #{$bp-md} {
         width: 100%;
         max-width: $maxWidth;
         margin: 0 auto;
-        flex-flow: row nowrap;
+    }
+}
+
+.mail-to {
+    font-weight: 700;
+    text-decoration: none;
+    color: $darkBlue;
+
+    @media #{$bp-md} {
+        padding-left: $padding / 2;
     }
 }
