@@ -1,0 +1,145 @@
+<!doctype html>
+
+<html>
+<head>
+    <title>7vs7 Form</title>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <link rel="icon" type="image/png" href="7V7-logo.png" sizes="16x16">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&family=Zen+Dots&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+<header>
+    <div class="header-container">
+        <div class="menu-icon" onclick="toggleMenu()">
+            <div class="menu-line one"></div>
+            <div class="menu-line two"></div>
+            <div class="menu-line three"></div>
+        </div>
+        <div class="logo">
+            <a href="https://www.7versus7.nl/en">
+                <img alt="7vs7" src="../7V7-logo.png">
+            </a>
+        </div>
+        <div class="nav-menu">
+            <a class="menu-item link" href="location">Location</a>
+            <a class="menu-item link" href="contact">Contact</a>
+            <div class="menu-item dropdown-link">Information
+              <div class="dropdown-container">
+                <a class="menu-item link" href="how-does-it-work">How does it work?</a>
+                <a class="menu-item link" href="for-who">For who is it?</a>
+                <a class="menu-item link" href="rules">Rules</a>
+                <a class="menu-item link" href="costs">What does it cost?</a>
+              </div>
+            </div>
+            <a class="menu-item link menu-button" href="form">Subscribe now!</a>
+        </div>
+    </div>
+</header>
+
+<div class="page-wrapper">
+
+    <div class="banner banner-with-form">
+        <div class="banner-wrapper">
+            <div class="headings">
+                <div class="seven-wrapper">
+                    <h1 class="number">7</h1>
+                    <h1 class="versus">versus</h1>
+                    <h1 class="number">7</h1>
+                </div>
+                <h2>The Haarlem Soccer competition!</h2>
+            </div>
+            <div class="form-container">
+                <form action="https://app.7versus7.nl/api/aanmelden" method="POST" class="submit-form" id="versus-form">
+                    <div class="form-input">
+                        <label for="voornaam" class="label">First Name (Required)</label>
+                        <input id="voornaam" name="voornaam" class="input first-name" placeholder="Voornaam">
+                    </div>
+                    <div class="form-input">
+                        <label for="achternaam" class="label">Last Name (Required)</label>
+                        <input id="achternaam" name="achternaam" class="input last-name" placeholder="Achternaam">
+                    </div>
+                    <div class="form-input">
+                        <label for="telefoon" class="label">Phone number (Required)</label>
+                        <input id="telefoon" name="telefoon" class="input phone-number" placeholder="Telefoonnummer">
+                    </div>
+                    <div class="form-input">
+                        <label for="email" class="label">Emailaddress (Required)</label>
+                        <input id="email" name="email" class="input email-address" placeholder="Emailadres">
+                    </div>
+                    <div class="radio-label">
+                        Do you want to register as a team or as an individual?
+                    </div>
+                    <div class="form-input">
+                        <div class="radio-button">
+                            <input type="radio" id="vriendenteam" name="team_type" value="vriendenteam"
+                                   onchange="showTeam()">
+                            <label for="vriendenteam">Team</label>
+                        </div>
+                        <div class="radio-button">
+                            <input type="radio" id="individueel" name="team_type" value="individueel"
+                                   onchange="hideTeam()">
+                            <label for="individueel">Individual</label>
+                        </div>
+                        <div class="radio-button">
+                            <input type="radio" id="bedrijfsteam" name="team_type" value="bedrijfsteam"
+                                   onchange="showTeam()">
+                            <label for="bedrijfsteam">Companyteam</label>
+                        </div>
+                    </div>
+                    <div class="form-input team-name-input">
+                        <label for="team_naam" class="label">Teamname (Optional)</label>
+                        <input id="team_naam" name="team_naam" class="input team-name" placeholder="Teamnaam">
+                    </div>
+                    <div class="form-input">
+                        <div class="radio-button">
+                            <input type="radio" id="klasse_hoog" name="klasse" value="hoog">
+                            <label for="klasse_hoog">High League</label>
+                        </div>
+                        <div class="radio-button">
+                            <input type="radio" id="klasse_laag" name="klasse" value="laag">
+                            <label for="klasse_laag">Low League</label>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <button class="submit-button" form="versus-form" type="submit">
+                            Send subscription!
+                        </button>
+                        <div class="sub-button" onclick="displayForm()">
+                            Subscribe now!
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="image">
+                <img alt="7vs7-banner" src="../7vs7-banner.jpg">
+            </div>
+        </div>
+    </div>
+
+    <div class="spacer-sm"></div>
+
+</div>
+<div class="spacer-sm"></div>
+<footer>
+    <div class="footer-container">
+        <img alt="7vs7" src="../7V7-logo.png">
+        <div class="footer-menu-items">
+          <a class="menu-item link" href="location">Location</a>
+          <a class="menu-item link" href="contact">Contact</a>
+          <a class="menu-item link" href="how-does-it-work">How does it work?</a>
+          <a class="menu-item link" href="for-who">For who is it?</a>
+          <a class="menu-item link" href="rules">Rules</a>
+          <a class="menu-item link" href="costs">What does it cost?</a>
+        </div>
+    </div>
+</footer>
+<script src="../form.js"></script>
+<script src="../menu.js"></script>
+</body>
+</html>
