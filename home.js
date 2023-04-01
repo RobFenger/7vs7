@@ -1,5 +1,5 @@
 // Nieuwe URL instellen
-history.pushState(null, null, "7vs7/home");
+history.pushState(null, null, "/home");
 
 // Even wachten om de URL in de adresbalk te zien
 setTimeout(() => {
