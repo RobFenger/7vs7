@@ -967,6 +967,15 @@ header {
 
     @media #{$bp-md} {
         padding: $padding;
+        padding-bottom: 0;
+    }
+}
+
+.price-exc {
+    font-size: 14px;
+
+    @media #{$bp-md} {
+        padding: 0 $padding;
     }
 }
 

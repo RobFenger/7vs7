@@ -1176,6 +1176,17 @@ header.header-sm .menu-icon .menu-line {
 @media only screen and (min-width: 992px) {
   .price-table {
     padding: 30px;
+    padding-bottom: 0;
+  }
+}
+
+.price-exc {
+  font-size: 14px;
+}
+
+@media only screen and (min-width: 992px) {
+  .price-exc {
+    padding: 0 30px;
   }
 }
 
