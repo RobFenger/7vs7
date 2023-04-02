@@ -1114,6 +1114,10 @@ header.header-sm .menu-icon .menu-line {
   }
 }
 
+.info-wrapper .row h3 {
+  padding-bottom: 0;
+}
+
 .info-wrapper .row .intro,
 .info-wrapper .row .list-title {
   padding: 10px 0;
