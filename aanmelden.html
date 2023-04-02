@@ -58,19 +58,19 @@
                 <form action="https://app.7versus7.nl/api/aanmelden" method="POST" class="submit-form" id="versus-form">
                     <div class="form-input">
                         <label for="voornaam" class="label">Voornaam (Verplicht)</label>
-                        <input id="voornaam" name="voornaam" class="input first-name" placeholder="Voornaam">
+                        <input id="voornaam" name="voornaam" class="input first-name" placeholder="Voornaam" required>
                     </div>
                     <div class="form-input">
                         <label for="achternaam" class="label">Achternaam (Verplicht)</label>
-                        <input id="achternaam" name="achternaam" class="input last-name" placeholder="Achternaam">
+                        <input id="achternaam" name="achternaam" class="input last-name" placeholder="Achternaam" required>
                     </div>
                     <div class="form-input">
                         <label for="telefoon" class="label">Telefoonnummer (Verplicht)</label>
-                        <input id="telefoon" name="telefoon" class="input phone-number" placeholder="Telefoonnummer">
+                        <input id="telefoon" name="telefoon" class="input phone-number" placeholder="Telefoonnummer" required pattern="^(?:\+)?(?:[0-9]●?|[-]●?){6,14}[0-9]$" title="Voer een geldig telefoonnummer in">
                     </div>
                     <div class="form-input">
                         <label for="email" class="label">Emailadres (Verplicht)</label>
-                        <input id="email" name="email" class="input email-address" placeholder="Emailadres">
+                        <input id="email" name="email" class="input email-address" placeholder="Emailadres" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Voer een geldig e-mailadres in">
                     </div>
                     <div class="radio-label">
                         Wil je je inschrijven als team of als individu?
@@ -95,6 +95,9 @@
                     <div class="form-input team-name-input">
                         <label for="team_naam" class="label">Teamnaam (Optioneel)</label>
                         <input id="team_naam" name="team_naam" class="input team-name" placeholder="Teamnaam">
+                    </div>
+                    <div class="radio-label">
+                        Wil je liever ingedeeld worden in een hoge of lage klasse?
                     </div>
                     <div class="form-input">
                         <div class="radio-button">

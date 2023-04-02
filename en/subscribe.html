@@ -58,19 +58,19 @@
                 <form action="https://app.7versus7.nl/api/aanmelden" method="POST" class="submit-form" id="versus-form">
                     <div class="form-input">
                         <label for="voornaam" class="label">First Name (Required)</label>
-                        <input id="voornaam" name="voornaam" class="input first-name" placeholder="Voornaam">
+                        <input id="voornaam" name="voornaam" class="input first-name" placeholder="Voornaam" required>
                     </div>
                     <div class="form-input">
                         <label for="achternaam" class="label">Last Name (Required)</label>
-                        <input id="achternaam" name="achternaam" class="input last-name" placeholder="Achternaam">
+                        <input id="achternaam" name="achternaam" class="input last-name" placeholder="Achternaam" required>
                     </div>
                     <div class="form-input">
                         <label for="telefoon" class="label">Phone number (Required)</label>
-                        <input id="telefoon" name="telefoon" class="input phone-number" placeholder="Telefoonnummer">
+                        <input id="telefoon" name="telefoon" class="input phone-number" placeholder="Telefoonnummer" required pattern="^(?:\+)?(?:[0-9]●?|[-]●?){6,14}[0-9]$" title="This is not a valid phone-number">
                     </div>
                     <div class="form-input">
                         <label for="email" class="label">Emailaddress (Required)</label>
-                        <input id="email" name="email" class="input email-address" placeholder="Emailadres">
+                        <input id="email" name="email" class="input email-address" placeholder="Emailadres" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="This is not a valid email-address">
                     </div>
                     <div class="radio-label">
                         Do you want to register as a team or as an individual?
@@ -95,6 +95,9 @@
                     <div class="form-input team-name-input">
                         <label for="team_naam" class="label">Teamname (Optional)</label>
                         <input id="team_naam" name="team_naam" class="input team-name" placeholder="Teamnaam">
+                    </div>
+                    <div class="radio-label">
+                        Do you want to play in a high or low league?
                     </div>
                     <div class="form-input">
                         <div class="radio-button">

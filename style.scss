@@ -81,6 +81,7 @@ body {
 h2 {
     font-family: $fontFamily;
     font-size: $h2FontSizeMobile;
+    font-weight: normal;
     line-height: $h2LineHeightMobile;
 
     @media #{$bp-md} {
@@ -813,7 +814,6 @@ header {
         align-items: flex-start;
 
         .card-title {
-            font-family: "DrukText-Super";
             font-size: 30px;
             line-height: 30px;
         }
@@ -917,6 +917,16 @@ header {
             }
         }
 
+        .intro,
+        .list-title {
+            padding: $padding / 3 0;
+            font-weight: normal;
+
+            @media #{$bp-md} {
+                padding: $padding;
+            }
+        }
+
         .unordered-list {
             padding: $padding / 2;
             margin: 0;
@@ -952,6 +962,7 @@ header {
 
 .price-table {
     width: 100%;
+    padding-top: $padding;
     flex-flow: column nowrap;
 
     @media #{$bp-md} {
@@ -1028,14 +1039,10 @@ header {
 }
 
 .form-container {
-    //develop
     width: auto;
-    margin: 0 auto;
-}
-
-.form-container {
     max-height: $buttonMinHeight + $padding * 2;
     padding: $padding;
+    margin: 0 auto;
     flex-flow: column nowrap;
     justify-content: flex-end;
     border-radius: $borderRadius;
@@ -1056,15 +1063,17 @@ header {
             width: 100%;
             min-height: $buttonMinHeight;
             padding: $padding / 2;
-            border: 2px solid $lightBlue;
+            border: 0;
+            border-bottom: 2px solid $darkBlue;
             border-radius: 0;
             font-size: $fontSize;
+            background: transparent;
 
             &:hover,
             &:active,
             &:focus,
             &:focus-visible {
-                border: 2px solid $darkBlue;
+                border-bottom: 2px solid $lightBlue;
                 border-radius: 0;
                 outline: 0;
             }
@@ -1076,6 +1085,25 @@ header {
 
             input {
                 margin-right: $padding / 2;
+            }
+
+            input[type='radio'] {
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                width: 13px;
+                height: 13px;
+                box-sizing: border-box;
+                border: 3px solid white;
+                background: white;
+                outline: 2px solid #333;
+                cursor: pointer;
+
+                &:checked {
+                    background: #333;
+                }
             }
         }
     }

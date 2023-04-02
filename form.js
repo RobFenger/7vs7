@@ -22,7 +22,7 @@ function displayForm() {
   formContainer.classList.remove("form-is-closed");
   btnSubmit.style.zIndex = 1;
   if (formContainer.classList.contains("hide-form")) {
-    clearInterval(animate);
+    clearInterval(animateUp);
   };
   formContainer.classList.add("show-form");
   formContainer.classList.remove("hide-form");
@@ -62,5 +62,5 @@ function showTeam () {
 }
 
 function hideTeam () {
-  teamName.style.display = "none"
+  teamName.style.display = "none";
 }

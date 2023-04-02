@@ -48,6 +48,7 @@ body.no-scroll {
 h2 {
   font-family: "Ubuntu";
   font-size: 40px;
+  font-weight: normal;
   line-height: 40px;
 }
 
@@ -987,7 +988,6 @@ header.header-sm .menu-icon .menu-line {
 }
 
 .cards-container .card-body .card-title {
-  font-family: "DrukText-Super";
   font-size: 30px;
   line-height: 30px;
 }
@@ -1114,6 +1114,19 @@ header.header-sm .menu-icon .menu-line {
   }
 }
 
+.info-wrapper .row .intro,
+.info-wrapper .row .list-title {
+  padding: 10px 0;
+  font-weight: normal;
+}
+
+@media only screen and (min-width: 992px) {
+  .info-wrapper .row .intro,
+  .info-wrapper .row .list-title {
+    padding: 30px;
+  }
+}
+
 .info-wrapper .row .unordered-list {
   padding: 15px;
   margin: 0;
@@ -1153,6 +1166,7 @@ header.header-sm .menu-icon .menu-line {
 
 .price-table {
   width: 100%;
+  padding-top: 30px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
@@ -1239,12 +1253,9 @@ header.header-sm .menu-icon .menu-line {
 
 .form-container {
   width: auto;
-  margin: 0 auto;
-}
-
-.form-container {
   max-height: 110px;
   padding: 30px;
+  margin: 0 auto;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
@@ -1279,13 +1290,15 @@ header.header-sm .menu-icon .menu-line {
   width: 100%;
   min-height: 50px;
   padding: 15px;
-  border: 2px solid #d4d6df;
+  border: 0;
+  border-bottom: 2px solid #1d1f48;
   border-radius: 0;
   font-size: 16px;
+  background: transparent;
 }
 
 .form-container .form-input .input:hover, .form-container .form-input .input:active, .form-container .form-input .input:focus, .form-container .form-input .input:focus-visible {
-  border: 2px solid #1d1f48;
+  border-bottom: 2px solid #d4d6df;
   border-radius: 0;
   outline: 0;
 }
@@ -1302,6 +1315,25 @@ header.header-sm .menu-icon .menu-line {
 
 .form-container .form-input .radio-button input {
   margin-right: 15px;
+}
+
+.form-container .form-input .radio-button input[type='radio'] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 13px;
+  height: 13px;
+  box-sizing: border-box;
+  border: 3px solid white;
+  background: white;
+  outline: 2px solid #333;
+  cursor: pointer;
+}
+
+.form-container .form-input .radio-button input[type='radio']:checked {
+  background: #333;
 }
 
 .form-container .radio-label {
