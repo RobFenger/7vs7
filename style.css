@@ -267,6 +267,8 @@ header.header-sm .menu-icon .menu-line {
   left: 0;
   background: #e30d13;
   overflow: auto;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
   -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
   transition: -webkit-transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
   transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -338,6 +340,8 @@ header.header-sm .menu-icon .menu-line {
             justify-content: flex-end;
     position: static;
     overflow: visible;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 

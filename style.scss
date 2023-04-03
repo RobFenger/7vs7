@@ -262,7 +262,6 @@ header {
     }
 
     .nav-menu {
-        // display: none;
         width: 100vw;
         height: 100vh;
         padding-top: $headerSize;
@@ -273,6 +272,7 @@ header {
         left: 0;
         background: $color1;
         overflow: auto;
+        transform: translateX(-100%);
         transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 
         .menu-item {
@@ -320,6 +320,7 @@ header {
             justify-content: flex-end;
             position: static;
             overflow: visible;
+            transform: translateX(0);
         }
     }
 
