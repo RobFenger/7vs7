@@ -1363,3 +1363,15 @@ $circleWidth: 40px;
         padding-left: $padding / 2;
     }
 }
+
+
+//----------- Thank You ------------
+
+.thank-you-message {
+    @media #{$bp-md} {
+        width: 100%;
+        max-width: $maxWidth;
+        margin: 0 auto;
+        justify-content: flex-start;
+    }
+}

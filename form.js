@@ -29,38 +29,18 @@ function displayForm() {
   animateFormUp = setInterval(animateUp, 10);
 };
 
-function animateDown() {
-    if (formHeight <= (btnDisplayHeight + btnDisplayMarginBottom)) {
-      form.style.maxHeight = btnDisplayHeight + btnDisplayMarginBottom + 'px';
-      clearInterval(animate);
-      formContainer.classList.remove("show-form");
-    } else {
-      formHeight = formHeight - 8;
-
-      // this 8 is used for the speed of the animation. the height of the form decreases with 8px per 1/100 second
-      // So speed = (800px per second)
-
-      form.style.maxHeight = formHeight + 'px';
-    };
-  };
-
-function hideForm() {
-  clearInterval(animateFormUp);
-  formContainer.classList.add("hide-form");
-  formHeight = form.offsetHeight;
-  if (window.innerWidth <= 992) {
-    body.classList.remove("no-scroll");
-  };
-  animate = setInterval(animateDown, 10);
-
-};
-
-
-
 function showTeam () {
     teamName.style.display = "flex";
-}
+};
 
 function hideTeam () {
   teamName.style.display = "none";
-}
+};
+
+function naarBedankt() {
+  window.location.href = "https://www.7versus7.nl/bedankt";
+};
+
+function toThanks() {
+  window.location.href = "https://www.7versus7.nl/en/thankyou";
+};
