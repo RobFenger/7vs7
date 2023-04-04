@@ -1648,12 +1648,6 @@ footer .footer-container .menu-item:after {
 }
 
 @media only screen and (min-width: 992px) {
-  .mail-to {
-    padding-left: 15px;
-  }
-}
-
-@media only screen and (min-width: 992px) {
   .thank-you-message {
     width: 100%;
     max-width: 1180px;

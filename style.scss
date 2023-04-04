@@ -1359,10 +1359,6 @@ $circleWidth: 40px;
     font-weight: 700;
     text-decoration: none;
     color: $darkBlue;
-
-    @media #{$bp-md} {
-        padding-left: $padding / 2;
-    }
 }
 
 
