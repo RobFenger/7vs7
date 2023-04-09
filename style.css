@@ -718,8 +718,11 @@ header.header-sm .menu-icon .menu-line {
   max-width: none;
 }
 
-.intro-text-home {
+.intro-text-home,
+.date-info {
+  max-width: 1180px;
   padding: 0 15px;
+  margin: 0 auto;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;

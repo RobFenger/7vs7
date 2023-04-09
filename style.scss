@@ -604,8 +604,11 @@ header {
     }
 }
 
-.intro-text-home {
+.intro-text-home,
+.date-info {
+    max-width: $maxWidth;
     padding: 0 $padding / 2;
+    margin: 0 auto;
     justify-content: center;
     text-align: center;
 }
