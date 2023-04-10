@@ -1057,6 +1057,9 @@ header {
 }
 
 .form-container {
+    // .team-name-input {
+    //     display: none;
+    // }
     width: auto;
     max-height: $buttonMinHeight + $padding * 2;
     padding: $padding;
@@ -1128,10 +1131,6 @@ header {
 
     .radio-label {
         padding-bottom: $padding / 3;
-    }
-
-    .team-name-input {
-        display: none;
     }
 
     .buttons {

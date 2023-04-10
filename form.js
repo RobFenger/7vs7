@@ -37,10 +37,36 @@ function hideTeam () {
   teamName.style.display = "none";
 };
 
-function naarBedankt() {
-  window.location.href = "https://www.7versus7.nl/bedankt";
-};
+// Sending the form and redirect user to thank-you-page
 
-function toThanks() {
-  window.location.href = "https://www.7versus7.nl/en/thankyou";
-};
+btnSubmit.addEventListener('click', (event) => {
+  event.preventDefault();
+
+  const formData = new FormData(form);
+  const data = {};
+
+  for (const [key, value] of formData.entries()) {
+    data[key] = value;
+  }
+
+  const options = {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+  };
+
+  fetch('https://app.7versus7.nl/api/aanmelden', options)
+    .then(response => response.json())
+    .then(data => {
+      console.log(data);
+      if (window.location == "https://www.7versus7.nl/aanmelden") {
+        window.location = "https://www.7versus7.nl/bedankt";
+      } else if (window.location == "https://www.7versus7.nl/en/subscribe") {
+        window.location = "https://www.7versus7.nl/en/thankyou";
+      }
+    })
+    .catch(error => console.error(error));
+});

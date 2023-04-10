@@ -55,7 +55,7 @@
                 <h2>The Haarlem Soccer competition!</h2>
             </div>
             <div class="form-container">
-                <form action="https://app.7versus7.nl/api/aanmelden" method="POST" class="submit-form" id="versus-form" onsubmit="toThanks()">
+                <form class="submit-form" id="versus-form">
                     <div class="form-input">
                         <label for="voornaam" class="label">First Name (Required)</label>
                         <input id="voornaam" name="voornaam" class="input first-name" placeholder="Voornaam" required>
@@ -78,7 +78,7 @@
                     <div class="form-input">
                         <div class="radio-button">
                             <input type="radio" id="vriendenteam" name="team_type" value="vriendenteam"
-                                   onchange="showTeam()">
+                                   onchange="showTeam()" checked>
                             <label for="vriendenteam">Team</label>
                         </div>
                         <div class="radio-button">
@@ -105,7 +105,7 @@
                             <label for="klasse_hoog">High League</label>
                         </div>
                         <div class="radio-button">
-                            <input type="radio" id="klasse_laag" name="klasse" value="laag">
+                            <input type="radio" id="klasse_laag" name="klasse" value="laag" checked>
                             <label for="klasse_laag">Low League</label>
                         </div>
                     </div>
