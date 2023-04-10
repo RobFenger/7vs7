@@ -49,6 +49,7 @@ $spacerSm: 40px;
 $spacerMd: 80px;
 $fontSize: 16px;
 $buttonMinHeight: 50px;
+$socialWidth: 80px;
 
 * {
     box-sizing: border-box;
@@ -1221,12 +1222,7 @@ footer {
 
         img {
             max-width: 200px;
-            padding: $padding / 2;
-            margin-bottom: $padding / 2;
-
-            @media #{$bp-md} {
-                margin-bottom: 0;
-            }
+            padding: 0 $padding / 2;
         }
 
         .footer-menu-items {
@@ -1250,6 +1246,12 @@ footer {
             @media #{$bp-md} {
                 margin: 0 $padding / 2;
             }
+        }
+
+        .social-icon img,
+        .social-icon {
+            width: $socialWidth;
+            height: $socialWidth;
         }
     }
 }
